@@ -1,4 +1,7 @@
 import { defineStore } from "pinia";
+import { watch } from "vue";
+import { useI18n } from "vue-i18n";
+
 
 export const useLangStore = defineStore("lang", {
     state: () => ({
@@ -14,6 +17,14 @@ export const useLangStore = defineStore("lang", {
         setLang(newLang){
             this.lang = newLang
             localStorage.setItem("lang", newLang)
+        },
+        initLang(){
+            const {locale} = useI18n()
+            watch(
+                () => this.lang,
+                (val) => {locale.value = val },
+                { immediate: true }
+            )
         }
     }
 })
