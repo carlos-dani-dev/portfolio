@@ -9,7 +9,7 @@
 
 <template>
 
-<section class="p-12 max-w-6xl mx-auto grid grid-cols-[1fr_320px] gap-8 items-center">
+<section class="p-12 max-w-6xl mx-auto flex flex-col-reverse lg:grid lg:grid-cols-[1fr_auto] gap-12 lg:gap-24 items-center justify-between">
   <div>
     <div class="flex gap-2">
         <span class="colored-text skill-tag inline-flex border rounded-full px-3.5 py-1.5 text-sm mb-6">
@@ -19,9 +19,9 @@
         {{t('me.ml_researcher_skill_tag')}}
         </span>
     </div>
-    <p class="text-xl mb-1">{{ t('me.hello') }}</p>
-    <h1 class="colored-text text-4xl font-bold mb-4">Carlos Portela</h1>
-    <p class="leading-relaxed max-w-md mb-6">
+    <p class="text-xl mb-2">{{ t('me.hello') }}</p>
+    <h1 class="colored-text lg:text-7xl font-bold mb-6 tracking-tight">Carlos Portela</h1>
+    <p class="leading-relaxed text-lg max-w-lg mb-8">
         {{ t('me.intro') }}
     </p>
     <div class="flex gap-3 mb-6">
@@ -35,7 +35,7 @@
     <div class="flex gap-3">
     </div>
   </div>
-  <div class="img-mockup w-[300px] h-[300px] rounded-full overflow-hidden mx-auto">
+  <div class="img-mockup w-[350px] h-[350px] lg:w-[480px] lg:h-[480px] rounded-full overflow-hidden mx-auto">
     <img src="../assets/images/me.png" class="w-full h-full object-cover" />
   </div>
 </section>
@@ -45,6 +45,7 @@
 <style scoped>
 .img-mockup{
     background-color: var(--me-img-mockup-bg-color);
+    box-shadow: 0 0 100px -20px var(--me-img-mockup-bg-color);
 }
 
 .skill-tag{

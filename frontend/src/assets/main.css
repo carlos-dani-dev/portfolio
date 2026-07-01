@@ -10,6 +10,7 @@
   --me-tag-skill-bg-color: rgb(237, 237, 237);
   --me-text-color: #776da1;
   --me-social-icon-color: black;
+  --aboutMe-skill-card-shade-color-hover: #4632A0;
 }
 
 :root[page-theme="dark-default"] {
@@ -22,6 +23,7 @@
   --me-tag-skill-bg-color: rgb(27, 27, 27);
   --me-text-color: rgb(253, 140, 60);
   --me-social-icon-color: white;
+  --aboutMe-skill-card-shade-color-hover: #f97316;
 }
 
 body {
