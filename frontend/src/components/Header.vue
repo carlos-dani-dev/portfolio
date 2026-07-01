@@ -20,8 +20,9 @@
 
         <div class="items-center">
             <ul class="flex flex-wrap gap-3">
-                <li><a class="nav-a">{{ t('nav.about') }}</a></li>
-                <li><a class="nav-a">{{ t('nav.projects') }}</a></li>
+                <li><a href="#aboutMe-section" class="nav-a">{{ t('nav.about') }}</a></li>
+                <li><a href="#stacks-section" class="nav-a">{{ t('nav.stack') }}</a></li>
+                <li><a href="#projects-section" class="nav-a">{{ t('nav.projects') }}</a></li>
                 <li><a class="nav-a">{{ t('nav.experiences') }}</a></li>
                 <li><a class="nav-a">{{t('nav.contact')}}</a></li>
             </ul>

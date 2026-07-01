@@ -1,6 +1,7 @@
 export default {
     nav: {
         about: "About me",
+        stack: "Stack",
         projects: "Projects",
         experiences: "Experiences",
         contact: "Contact"
@@ -24,5 +25,9 @@ export default {
         backend: "APIs & Backend",
         ai: "Generative AI Integrations",
         research: "Applied ML Research"
+    },
+    stacks: {
+        title: "Domain Ecosystem",
+        description: "Languages, frameworks, and tools I use in my day-to-day development."
     }
 }

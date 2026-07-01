@@ -10,7 +10,7 @@
 
 <template>
 
-<section class="flex flex-col items-center">
+<section id="aboutMe-section" class="flex flex-col items-center">
     <h1 class="colored-text lg:text-5xl font-bold tracking-tight py-10">{{ t('aboutMe.title') }}</h1>
     
     <div class="flex flex-col gap-5">
@@ -23,7 +23,7 @@
         </p>
     </div>
 
-    <div class="flex justify-center items-center text-sm text-xl font-bold py-10 gap-10">
+    <div class="flex justify-center items-center text-lg font-semibold py-10 gap-10">
         <div class="aboutMe-skill-card">
             <ServerIcon class="skill-card-icon"></ServerIcon>
             <p>{{ t('aboutMe.backend') }}</p>
@@ -47,14 +47,14 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 200px;
+    width: 300px;
     height: 140px;
     gap: 12px;
-    border: 1px solid var(--me-tag-skill-border-color);
+    border: 1px solid rgba(128, 128, 128, 0.15);
     border-radius: 14px;
     cursor: default;
     padding: 16px;
-    background-color: var(--me-tag-skill-bg-color);
+    background-color: var(--tags-bg-color);
     text-align: center;
 
     transition: transform 0.25s ease,
@@ -64,7 +64,8 @@
 
 .aboutMe-skill-card:hover {
     transform: translateY(-6px);
-    border-color: var(--accent);
+    border-color: var(--me-tag-skill-border-color);
+    background-color:  rgba(128, 128, 128, 0.2);
     box-shadow: 0 12px 30px -10px var(--aboutMe-skill-card-shade-color-hover);
 }
 
@@ -73,6 +74,7 @@
     width: 100%;
 }
 .aboutMe-skill-card:hover p, .skill-card-icon {
+    color: var(--aboutMe-skill-card-shade-color-hover);
     transform: scale(1.06);
 }
 
@@ -80,6 +82,10 @@
     width: 40px;
     height: 40px;
     display: block;
+}
+
+.aboutMe-skill-card:hover .skill-card-icon :deep(path){
+    fill: var(--aboutMe-skill-card-shade-color-hover);    
 }
 
 .skill-card-icon :deep(path){

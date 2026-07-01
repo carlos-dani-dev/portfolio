@@ -3,6 +3,7 @@
 
     import GithubIcon from "@/assets/icons/icons8-github.svg";
     import LinkedinIcon from "@/assets/icons/icons8-linkedin.svg";
+    import meImage from "@/assets/images/me.png";
 
     const {t} = useI18n()
 </script>
@@ -36,7 +37,7 @@
     </div>
   </div>
   <div class="img-mockup w-[350px] h-[350px] lg:w-[480px] lg:h-[480px] rounded-full overflow-hidden mx-auto">
-    <img src="../assets/images/me.png" class="w-full h-full object-cover" />
+        <img :src="meImage" alt="Carlos Portela" class="w-full h-full object-cover" />
   </div>
 </section>
 
