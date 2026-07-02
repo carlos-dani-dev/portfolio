@@ -1,13 +1,17 @@
 <script setup>
+import { useI18n } from 'vue-i18n';
+
+const {t} = useI18n()
+
 </script>
 
 <template>
 <section id="experiences-section" class="py-12 max-w-[1000px] mx-auto px-8">
   
   <div class="flex flex-col items-center mb-16">
-    <h2 class="colored-text text-4xl md:text-5xl font-bold tracking-tight mb-4">Experiência profissional</h2>
-    <p>
-      Estas são as minhas experiências que melhor representam meu trabalho como desenvolvedor e pesquisador.
+    <h2 class="colored-text text-4xl md:text-5xl font-bold tracking-tight mb-4">{{t('experiences.title')}}</h2>
+    <p class="text-lg opacity-80 max-w-1xl">
+      <MarkdownText :content="t('experiences.section_description')" />
     </p>
   </div>
 
@@ -20,21 +24,18 @@
         
         <div class="flex flex-col md:flex-row md:justify-between md:items-start mb-4 gap-2">
           <div>
-            <h3 class="text-2xl font-bold">Pesquisador CNPQ de Machine Learning</h3>
+            <h3 class="text-2xl font-bold">{{t('experiences.xp_1_title')}}</h3>
             <div class="flex items-center gap-3 mt-1">
               <span class="colored-text font-semibold text-lg tracking-wider">LabVip, UFPI</span>
             </div>
           </div>
           <span class="text-sm font-medium opacity-60 md:text-right whitespace-nowrap pt-1">
-            Agosto 2024 - Atual
+            {{t('experiences.xp_1_date')}}
           </span>
         </div>
         
         <p class="text-base opacity-80 mb-6 leading-relaxed">
-          Plataforma de IA para marketing: agentes de IA, base de conhecimento com RAG e busca semântica
-           (Neo4j), processamento de vídeos, criação de artes e templates com IMG.LY e integrações com diversas
-            APIs de redes sociais. Backend Node.js no Google Cloud Run, com Redis, camadas de segurança 
-            (rate limiting, CAPTCHA, JWT) e integrações com Claude e Gemini.
+          <MarkdownText :content="t('experiences.xp_1_description')" />
         </p>
         
         <div class="flex flex-wrap gap-3 mt-auto">
@@ -54,18 +55,18 @@
 
         <div class="flex flex-col md:flex-row md:justify-between md:items-start mb-4 gap-2">
           <div>
-            <h3 class="text-2xl font-bold">Analista de Dados Jr</h3>
+            <h3 class="text-2xl font-bold">{{ t('experiences.xp_2_title') }}</h3>
             <div class="flex items-center gap-3 mt-1">
               <span class="colored-text font-semibold text-lg tracking-wider">IGDS - Instituto de Gestão e Desenvolvimento Sustentável</span>
             </div>
           </div>
           <span class="text-sm font-medium opacity-60 md:text-right whitespace-nowrap pt-1">
-            Fev 2026 - Junho 2026
+            {{t('experiences.xp_2_date')}}
           </span>
         </div>
         
         <p class="text-base opacity-80 mb-6 leading-relaxed">
-          Estúdio de tecnologia criativa que combina design, tecnologia e narrativa para entregar experiências imersivas em web, AR/VR, games e web3. À frente do desenvolvimento e manutenção de aplicações full stack (React, Node.js, Python, TypeScript, AWS Amplify) e da criação de experiências interativas...
+          <MarkdownText :content="t('experiences.xp_2_description')" />
         </p>
         
         <div class="flex flex-wrap gap-3 mt-auto">

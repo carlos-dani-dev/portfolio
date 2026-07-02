@@ -13,31 +13,31 @@
 <section id="aboutMe-section" class="flex flex-col items-center py-12">
     <div class="flex flex-col items-center py-10">
         <h2 class="colored-text lg:text-5xl font-bold tracking-tight mb-4">{{ t('aboutMe.title') }}</h2>
-        <p>{{ t('aboutMe.section_description') }}</p>
+        <p class="text-lg opacity-80 max-w-1xl"><MarkdownText :content="t('aboutMe.section_description')" /></p>
     </div>
     
     <div class="flex flex-col gap-5">
-        <p class="leading-relaxed text-lg max-w-6xl">
-            {{ t('aboutMe.paragraph1') }}
+        <p class="leading-relaxed max-w-6xl text-lg opacity-80">
+            <MarkdownText :content="t('aboutMe.paragraph1')" />
         </p>
         
-        <p class="leading-relaxed text-lg max-w-6xl">
-            {{ t('aboutMe.paragraph2') }}
+        <p class="leading-relaxed max-w-6xl text-lg opacity-80">
+            <MarkdownText :content="t('aboutMe.paragraph2')" />
         </p>
     </div>
 
     <div class="flex justify-center items-center text-lg font-semibold py-10 gap-10">
         <div class="aboutMe-skill-card">
             <ServerIcon class="skill-card-icon"></ServerIcon>
-            <p>{{ t('aboutMe.backend') }}</p>
+            <p><MarkdownText :content="t('aboutMe.backend')" /></p>
         </div>
         <div class="aboutMe-skill-card">
             <MLIcon class="skill-card-icon"></MLIcon>
-            <p>{{ t('aboutMe.ai') }}</p>
+            <p><MarkdownText :content="t('aboutMe.ai')" /></p>
         </div>
         <div class="aboutMe-skill-card">
             <ResearchIcon class="skill-card-icon"></ResearchIcon>
-            <p>{{ t('aboutMe.research') }}</p>
+            <p><MarkdownText :content="t('aboutMe.research')" /></p>
         </div>
     </div>
 </section>

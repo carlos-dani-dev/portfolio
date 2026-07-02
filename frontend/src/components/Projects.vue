@@ -30,7 +30,7 @@ function stopPreview() {
 <section id="projects-section" class="py-12 max-w-10xl mx-auto px-8">
   <div class="text-center mb-16">
     <h2 class="colored-text text-4xl md:text-5xl font-bold tracking-tight mb-4">{{ t('projects.title') }}</h2>
-    <p>{{ t('projects.section_description') }}</p>
+    <p class="text-lg opacity-80 max-w-1xl"><MarkdownText :content="t('projects.section_description')" /></p>
   </div>
 
   <div class="project-card overflow-hidden border flex flex-col max-w-[1000px] mx-auto w-full rounded-2xl transition-all duration-300 hover:-translate-y-1 cursor-pointer">
@@ -54,7 +54,7 @@ function stopPreview() {
 
     <div class="flex flex-col gap-4 p-3">
 
-      <p class="colored-text text-3xl font-semibold">Vue Chatbot Template</p>
+      <p class="colored-text text-3xl font-semibold"><MarkdownText :content="t('projects.project1_title')" /></p>
 
       <div class="flex flex-wrap gap-3">
         <span class="colored-text skill-tag inline-flex border rounded-full px-3.5 py-1.5 text-sm">
@@ -69,7 +69,7 @@ function stopPreview() {
       </div>
 
       <p class="">
-        {{t('projects.project1_description')}}
+        <MarkdownText :content="t('projects.project1_description')" />
       </p>
 
     </div>

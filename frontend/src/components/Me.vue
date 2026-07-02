@@ -20,10 +20,10 @@
         {{t('me.ml_researcher_skill_tag')}}
         </span>
     </div>
-    <p class="text-xl mb-2">{{ t('me.hello') }}</p>
+    <p class="text-xl mb-2"><MarkdownText :content="t('me.hello')" /></p>
     <h1 class="colored-text lg:text-7xl font-bold mb-6 tracking-tight">Carlos Portela</h1>
-    <p class="leading-relaxed text-lg max-w-lg mb-8">
-        {{ t('me.intro') }}
+    <p class="leading-relaxed text-xl opacity-80  mb-8">
+        <MarkdownText :content="t('me.intro')" />
     </p>
     <div class="flex gap-3 mb-6">
         <a class="skill-tag w-10 h-10 rounded-full border flex items-center justify-center">
@@ -36,7 +36,7 @@
     <div class="flex gap-3">
     </div>
   </div>
-  <div class="img-mockup w-[350px] h-[350px] lg:w-[480px] lg:h-[480px] rounded-full overflow-hidden mx-auto">
+  <div class="img-mockup lg:w-[430px] lg:h-[430px] rounded-full overflow-hidden mx-auto">
         <img :src="meImage" alt="Carlos Portela" class="w-full h-full object-cover" />
   </div>
 </section>

@@ -24,7 +24,7 @@
                 <li><a href="#stacks-section" class="nav-a">{{ t('nav.stack') }}</a></li>
                 <li><a href="#projects-section" class="nav-a">{{ t('nav.projects') }}</a></li>
                 <li><a href="#experiences-section" class="nav-a">{{ t('nav.experiences') }}</a></li>
-                <li><a class="nav-a">{{t('nav.contact')}}</a></li>
+                <li><a href="#contact-section" class="nav-a">{{t('nav.contact')}}</a></li>
             </ul>
         </div>
 
@@ -175,5 +175,6 @@ select option {
 
 .nav-header{
   background-color: var(--color-bg);
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 </style>

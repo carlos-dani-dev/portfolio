@@ -5,6 +5,7 @@ import {createPinia} from 'pinia';
 import { createI18n } from 'vue-i18n';
 
 import App from '@/App.vue';
+import MarkdownText from '@/components/MarkdownText.vue';
 import router from '@/router/router.js';
 
 import ptBr from '@/locales/pt-br'
@@ -27,5 +28,6 @@ const i18n = createI18n({
 app.use(pinia);
 app.use(router);
 app.use(i18n);
+app.component('MarkdownText', MarkdownText);
 
 app.mount('#app');
