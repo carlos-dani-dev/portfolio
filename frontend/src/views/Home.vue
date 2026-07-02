@@ -4,6 +4,7 @@ import Me from '@/components/Me.vue';
 import Header from '@/components/Header.vue';
 import Stacks from '@/components/Stacks.vue';
 import Projects from '@/components/Projects.vue';
+import Experiences from '@/components/Experiences.vue';
 
 import { onMounted } from 'vue';
 
@@ -23,10 +24,13 @@ onMounted(() => {
 
 <template>
 <Header></Header>
+<main class="pt-24">
 <Me></Me>
 <AboutMe></AboutMe>
 <Stacks></Stacks>
 <Projects></Projects>
+<Experiences></Experiences>
+</main>
 </template>
 
 <style scoped>

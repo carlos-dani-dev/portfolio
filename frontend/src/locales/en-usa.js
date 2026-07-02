@@ -14,6 +14,7 @@ export default {
     },
     aboutMe: {
         title: "About me",
+        section_description: "A brief introduction to the experiences that have shaped me and the values that define me.",
         paragraph1: "I'm Carlos Daniel Portela, 22 years old, and I'm finishing my degree in Computer Science " +
             "at the Federal University of Piauí (UFPI). Here, I've been sharpening my software " +
             "development skills through real, impactful projects and applied research. " +
@@ -29,5 +30,10 @@ export default {
     stacks: {
         title: "Domain Ecosystem",
         description: "Languages, frameworks, and tools I use in my day-to-day development."
+    },
+    projects: {
+        title: "Most Relevant Projects",
+        section_description: "Here I present my main professional and academic contributions.",
+        project1_description: "A Vue.js-based chatbot template whose backend implements the communication protocol between OpenAI-like generative AI assistants."
     }
 }

@@ -10,8 +10,11 @@
 
 <template>
 
-<section id="aboutMe-section" class="flex flex-col items-center">
-    <h1 class="colored-text lg:text-5xl font-bold tracking-tight py-10">{{ t('aboutMe.title') }}</h1>
+<section id="aboutMe-section" class="flex flex-col items-center py-12">
+    <div class="flex flex-col items-center py-10">
+        <h2 class="colored-text lg:text-5xl font-bold tracking-tight mb-4">{{ t('aboutMe.title') }}</h2>
+        <p>{{ t('aboutMe.section_description') }}</p>
+    </div>
     
     <div class="flex flex-col gap-5">
         <p class="leading-relaxed text-lg max-w-6xl">

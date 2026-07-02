@@ -14,6 +14,7 @@ export default {
     },
     aboutMe:{
         title: "Sobre mim",
+        section_description: "Uma breve introdução às experiências que me moldaram e aos valores que me descrevem.",
         paragraph1: "Sou Carlos Daniel Portela, tenho 22 anos, e estou concluindo minha graduação em Ciências "+
             "da Computação, na Universidade Federal do Piauí. Por aqui, estou aprimorando minhas habilidades "+
             "de desenvolvimento de software e pesquisa aplicada com projetos reais e de impacto. "+
@@ -29,5 +30,10 @@ export default {
     stacks: {
         title: "Ecossistema de Domínio",
         description: "Linguagens, frameworks e ferramentas que utilizo no desenvolvimento diário."
+    },
+    projects: {
+        title: "Projetos mais relevantes",
+        section_description: "Aqui apresento minhas principais contribuições profissionais e acadêmicas.",
+        project1_description: "Um template baseado em Vue.js de um chatbot cujo backend implementa o protocolo de comunicação entre assistentes de IA Generativa OpenAI-Like."
     }
 }

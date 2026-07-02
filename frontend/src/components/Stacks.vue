@@ -19,7 +19,7 @@ const stacks = [
 
 <template>
 
-<section id="stacks-section" class="py-24 max-w-6xl mx-auto px-8">
+<section id="stacks-section" class="py-12 max-w-6xl mx-auto px-8">
     <div class="text-center mb-16">
         <h2 class="colored-text text-4xl md:text-5xl font-bold mb-4 tracking-tight">{{t('stacks.title')}}</h2>
         <p class="max-w-2xl mx-auto text-lg">

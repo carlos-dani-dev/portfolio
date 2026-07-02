@@ -1,5 +1,9 @@
 <script setup>
+import { useI18n } from 'vue-i18n';
+
 import { ref } from 'vue';
+
+const {t} = useI18n()
 
 const videoRef = ref(null);
 
@@ -23,25 +27,52 @@ function stopPreview() {
 
 <template>
 
-<section id="projects-section">
+<section id="projects-section" class="py-12 max-w-10xl mx-auto px-8">
+  <div class="text-center mb-16">
+    <h2 class="colored-text text-4xl md:text-5xl font-bold tracking-tight mb-4">{{ t('projects.title') }}</h2>
+    <p>{{ t('projects.section_description') }}</p>
+  </div>
 
+  <div class="project-card overflow-hidden border flex flex-col max-w-[1000px] mx-auto w-full rounded-2xl transition-all duration-300 hover:-translate-y-1 cursor-pointer">
+    <div
+      class="card-media"
+      @mouseenter="playPreview"
+      @mouseleave="stopPreview"
+    >
+      <img :src="thumb" class="thumb" alt="Preview" />
 
-  <div
-    class="card-media"
-    @mouseenter="playPreview"
-    @mouseleave="stopPreview"
-  >
-    <img :src="thumb" class="thumb" alt="Preview" />
+      <video
+        ref="videoRef"
+        :src="previewVideo"
+        class="preview-video"
+        muted
+        loop
+        playsinline
+        preload="metadata"
+      ></video>
+    </div>
 
-    <video
-      ref="videoRef"
-      :src="previewVideo"
-      class="preview-video"
-      muted
-      loop
-      playsinline
-      preload="metadata"
-    ></video>
+    <div class="flex flex-col gap-4 p-3">
+
+      <p class="colored-text text-3xl font-semibold">Vue Chatbot Template</p>
+
+      <div class="flex flex-wrap gap-3">
+        <span class="colored-text skill-tag inline-flex border rounded-full px-3.5 py-1.5 text-sm">
+          Vue.js
+        </span>
+        <span class="colored-text skill-tag inline-flex border rounded-full px-3.5 py-1.5 text-sm">
+          FastAPI
+        </span>
+        <span class="colored-text skill-tag inline-flex border rounded-full px-3.5 py-1.5 text-sm">
+          PostgreSQL
+        </span>
+      </div>
+
+      <p class="">
+        {{t('projects.project1_description')}}
+      </p>
+
+    </div>
   </div>
 
 </section>
@@ -49,11 +80,20 @@ function stopPreview() {
 </template>
 
 <style scoped>
+.project-card {
+  background-color: var(--project-card-bg-color);
+  border-color: rgba(128, 128, 128, 0.15);
+}
+
+.project-card:hover {
+  border-color: var(--me-tag-skill-border-color, rgba(128, 128, 128, 0.3));
+}
+
 .card-media {
   position: relative;
   overflow: hidden;
+  height: 300px;
   width: 100%;
-  max-width: 900px;
   aspect-ratio: 16/9;
 }
 
@@ -78,5 +118,14 @@ function stopPreview() {
 
 .card-media:hover .thumb {
   opacity: 0;
+}
+
+.colored-text{
+  color: var(--me-text-color);
+}
+
+.skill-tag{
+    border-color: var(--me-tag-skill-border-color);
+    background-color: var(--me-tag-skill-bg-color);
 }
 </style>

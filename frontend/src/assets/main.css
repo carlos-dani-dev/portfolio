@@ -16,6 +16,7 @@ html {
   --me-social-icon-color: black;
   --aboutMe-skill-card-shade-color-hover: #4632A0;
   --tags-bg-color: rgba(128, 128, 128, 0.05);
+  --project-card-bg-color: rgba(180, 177, 177, 0.152);
 }
 
 :root[page-theme="dark-default"] {
@@ -30,6 +31,7 @@ html {
   --me-social-icon-color: white;
   --aboutMe-skill-card-shade-color-hover: #f97316;
   --tags-bg-color: rgba(128, 128, 128, 0.05);
+  --project-card-bg-color: rgba(180, 177, 177, 0.152);
 }
 
 body {

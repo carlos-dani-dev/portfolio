@@ -12,7 +12,7 @@
 
 <template>
 
-<nav class="w-full">
+<nav class="nav-header fixed top-0 left-0 right-0 z-50 w-full">
 
     <div :page-theme="themeStore.currentTheme" class="flex justify-between items-center">
 
@@ -23,7 +23,7 @@
                 <li><a href="#aboutMe-section" class="nav-a">{{ t('nav.about') }}</a></li>
                 <li><a href="#stacks-section" class="nav-a">{{ t('nav.stack') }}</a></li>
                 <li><a href="#projects-section" class="nav-a">{{ t('nav.projects') }}</a></li>
-                <li><a class="nav-a">{{ t('nav.experiences') }}</a></li>
+                <li><a href="#experiences-section" class="nav-a">{{ t('nav.experiences') }}</a></li>
                 <li><a class="nav-a">{{t('nav.contact')}}</a></li>
             </ul>
         </div>
@@ -173,4 +173,7 @@ select option {
   fill: currentColor !important;
 }
 
+.nav-header{
+  background-color: var(--color-bg);
+}
 </style>
