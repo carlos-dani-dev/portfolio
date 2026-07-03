@@ -7,6 +7,10 @@ import { useThemeStore } from '@/stores/themeStore';
 const { t } = useI18n()
 const langStore = useLangStore()
 const themeStore = useThemeStore()
+
+themeStore.initTheme()
+langStore.initLang()
+
 </script>
 
 <template>
@@ -31,7 +35,7 @@ const themeStore = useThemeStore()
       </div>
 
       <div>
-        <input v-on:change="themeStore.changeTheme()" id="checkboxInput" type="checkbox" />
+        <input :checked="themeStore.isDark" v-on:change="themeStore.changeTheme()" id="checkboxInput" type="checkbox" />
         <label class="toggleSwitch" for="checkboxInput">
           <div class="icon icon--moon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="26" height="26">
@@ -159,19 +163,9 @@ const themeStore = useThemeStore()
 
 <style scoped>
 .resume-page {
-  --r-border: color-mix(in srgb, currentColor 14%, transparent);
-  --r-card-bg: color-mix(in srgb, var(--color-bg) 92%, white 8%);
-  --r-muted: color-mix(in srgb, currentColor 62%, transparent);
-
   background-color: var(--color-bg);
   min-height: 100vh;
   padding: 5.5rem 1.25rem 4rem;
-}
-
-:global(html.dark) .resume-page,
-:global(.dark) .resume-page {
-  --r-accent: #2dd4bf;
-  --r-card-bg: color-mix(in srgb, var(--color-bg) 88%, white 12%);
 }
 
 /* ---------- top bar ---------- */
@@ -188,7 +182,7 @@ const themeStore = useThemeStore()
   gap: 0.75rem;
   padding: 0.85rem 1.5rem;
   background-color: var(--color-bg);
-  border-bottom: 1px solid var(--r-border);
+  border-bottom: 1px solid var(--resume-section-border-color);
 }
 
 .breadcrumb {
@@ -203,11 +197,11 @@ const themeStore = useThemeStore()
   align-items: center;
   gap: 0.35rem;
   text-decoration: none;
-  color: var(--r-muted);
+  color: var(--resume-muted-text-color);
 }
 
-.breadcrumb__link:hover { color: var(--nav-a-text-color-hover, var(--r-accent)); }
-.breadcrumb__sep { color: var(--r-muted); }
+.breadcrumb__link:hover { color: var(--nav-a-text-color-hover); }
+.breadcrumb__sep { color: var(--resume-muted-text-color); }
 .breadcrumb__current { font-weight: 700; }
 
 .topbar__controls {
@@ -224,7 +218,7 @@ const themeStore = useThemeStore()
   font-weight: 700;
   text-decoration: none;
   color: inherit;
-  border: 1px solid var(--r-border);
+  border: 1px solid var(--resume-card-border-color);
   border-radius: 8px;
   padding: 0.4rem 0.75rem;
   transition: border-color 0.2s ease, color 0.2s ease;
@@ -236,11 +230,11 @@ const themeStore = useThemeStore()
 }
 
 select option {
-  background-color: white;
-  color: black;
+  background-color: var(--resume-option-bg-color);
+  color: var(--resume-option-text-color);
 }
 
-/* theme toggle — same mechanism as Nav.vue */
+/* theme toggle — mesmo mecanismo do Nav.vue */
 .toggleSwitch {
   width: 40px;
   height: 40px;
@@ -276,22 +270,22 @@ select option {
   opacity: 0;
 }
 
-#checkboxInput:not(:checked) + .toggleSwitch .icon--sun {
+#checkboxInput:not(:checked) + .toggleSwitch .icon--moon {
   transform: rotate(360deg) scale(1);
   opacity: 1;
 }
 
-#checkboxInput:not(:checked) + .toggleSwitch .icon--moon {
+#checkboxInput:not(:checked) + .toggleSwitch .icon--sun {
   transform: rotate(0deg) scale(0);
   opacity: 0;
 }
 
-#checkboxInput:checked + .toggleSwitch .icon--moon {
+#checkboxInput:checked + .toggleSwitch .icon--sun {
   transform: rotate(360deg) scale(1);
   opacity: 1;
 }
 
-#checkboxInput:checked + .toggleSwitch .icon--sun {
+#checkboxInput:checked + .toggleSwitch .icon--moon {
   transform: rotate(0deg) scale(0);
   opacity: 0;
 }
@@ -303,8 +297,8 @@ select option {
 .resume {
   max-width: 820px;
   margin: 0 auto;
-  background: var(--r-card-bg);
-  border: 1px solid var(--r-border);
+  background: var(--resume-card-bg-color);
+  border: 1px solid var(--resume-card-border-color);
   border-radius: 14px;
   padding: 2.5rem 2.25rem;
 }
@@ -318,7 +312,7 @@ select option {
 }
 
 .resume__role {
-  color: var(--nav-a-text-color-hover);
+  color: var(--resume-accent-color);
   font-weight: 600;
   font-size: 1.05rem;
   margin: 0 0 1rem;
@@ -335,7 +329,7 @@ select option {
   align-items: center;
   gap: 0.4rem;
   font-size: 0.85rem;
-  color: var(--r-muted);
+  color: var(--resume-muted-text-color);
   text-decoration: none;
 }
 
@@ -343,14 +337,14 @@ select option {
 
 .resume__section {
   padding: 1.35rem 0;
-  border-top: 1px solid var(--r-border);
+  border-top: 1px solid var(--resume-section-border-color);
 }
 
 .resume__title {
   font-size: 0.85rem;
   font-weight: 700;
   letter-spacing: 0.08em;
-  color: var(--r-muted);
+  color: var(--resume-muted-text-color);
   margin: 0 0 1rem;
 }
 
@@ -361,7 +355,7 @@ select option {
 }
 
 .resume__summary :deep(strong) {
-  color: var(--nav-a-text-color-hover);
+  color: var(--resume-accent-color);
   font-weight: 600;
 }
 
@@ -384,14 +378,14 @@ select option {
 }
 
 .resume__entry-company {
-  color: var(--nav-a-text-color-hover);
+  color: var(--resume-accent-color);
   font-size: 0.88rem;
   margin: 0.15rem 0 0;
 }
 
 .resume__entry-period {
   font-size: 0.82rem;
-  color: var(--r-muted);
+  color: var(--resume-muted-text-color);
   white-space: nowrap;
 }
 
@@ -400,16 +394,16 @@ select option {
   padding-left: 1.15rem;
   font-size: 0.9rem;
   line-height: 1.6;
-  color: var(--r-muted);
+  color: var(--resume-muted-text-color);
 }
 
 .resume__bullets li { margin-bottom: 0.35rem; }
-.resume__bullets li::marker { color: var(--r-accent); }
+.resume__bullets li::marker { color: var(--resume-bullet-marker-color); }
 
 .resume__bullets--projects li { list-style: disc; color: inherit; }
 .resume__project-stack {
   display: block;
-  color: var(--r-muted);
+  color: var(--resume-muted-text-color);
   font-size: 0.85rem;
   margin-top: 0.15rem;
 }

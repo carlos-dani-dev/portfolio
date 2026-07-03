@@ -45,29 +45,29 @@
 
 <style scoped>
 .img-mockup{
-    background-color: var(--me-img-mockup-bg-color);
-    box-shadow: 0 0 100px -20px var(--me-img-mockup-bg-color);
+    background-color: var(--img-mockup-bg-color);
+    box-shadow: 0 0 100px -20px var(--img-mockup-bg-color);
 }
 
 .skill-tag{
-    border: 1px solid var(--me-tag-skill-border-color);
-    background-color: var(--me-tag-skill-bg-color);
+    border: 1px solid var(--tag-skill-border-color);
+    background-color: var(--tag-skill-bg-color);
 }
 
 .colored-text{
-    color: var(--me-text-color);
+    color: var(--title-text-color);
 }
 
 .social-tag{
     border: 1px solid rgba(128, 128, 128, 0.15);
-    background-color: var(--me-tag-skill-bg-color);
+    background-color: var(--tag-skill-bg-color);
 }
 .social-icon:deep(path) {
-  fill: var(--me-social-icon-color);
+  fill: var(--social-icon-color);
 }
 
 .social-tag:hover {
-  background-color: var(--me-tag-skill-border-color);
+  background-color: var(--tag-skill-border-color);
 }
 
 

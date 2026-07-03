@@ -46,13 +46,13 @@ const stacks = [
 
 <style scoped>
 .stack-card {
-    background-color: rgba(128, 128, 128, 0.05);
-    border-color: rgba(128, 128, 128, 0.15);
+    background-color: var(--stack-tags-bg-color);
+    border-color: var(--stack-tags-border-color);
 }
 
 .stack-card:hover {
-    background-color: rgba(128, 128, 128, 0.1);
-    border-color: var(--me-tag-skill-border-color, rgba(128, 128, 128, 0.3));
+    background-color: var(--stack-tags-bg-color-hover);
+    border-color: var(--stack-tags-border-color-hover);
 }
 
 .stack-icon {
@@ -62,6 +62,6 @@ const stacks = [
 }
 
 .colored-text{
-    color: var(--me-text-color);
+    color: var(--title-text-color);
 }
 </style>

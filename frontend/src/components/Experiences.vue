@@ -86,30 +86,25 @@ const {t} = useI18n()
 
 <style scoped>
 .experience-card {
-  background-color: var(--project-card-bg-color, rgba(128, 128, 128, 0.05));
-  border: 1px solid rgba(128, 128, 128, 0.15);
+  background-color: var(--experience-card-bg-color);
+  border: 1px solid var(--experience-card-border-color);
 }
 
 .experience-card:hover {
-  border-color: var(--me-tag-skill-border-color, rgba(128, 128, 128, 0.3));
+  border-color: var(--experience-card-border-color-hover, rgba(128, 128, 128, 0.3));
 }
 
 .colored-text {
-  color: var(--me-text-color);
+  color: var(--title-text-color);
 }
 
 .timeline-dot {
-  background-color: var(--me-text-color);
-  box-shadow: 0 0 0 4px var(--app-bg-color, #0f172a);
-}
-
-.badge-bg {
-  background-color: var(--me-tag-skill-bg-color);
+  background-color: var(--title-text-color);
 }
 
 .skill-tag {
-  border-color: var(--me-tag-skill-border-color);
-  background-color: var(--me-tag-skill-bg-color);
+  border-color: var(--tag-skill-border-color);
+  background-color: var(--tag-skill-bg-color);
 }
 
 h3, p {

@@ -57,7 +57,7 @@
     border-radius: 14px;
     cursor: default;
     padding: 16px;
-    background-color: var(--tags-bg-color);
+    background-color: var(--hab-tags-bg-color);
     text-align: center;
 
     transition: transform 0.25s ease,
@@ -67,9 +67,9 @@
 
 .aboutMe-skill-card:hover {
     transform: translateY(-6px);
-    border-color: var(--me-tag-skill-border-color);
-    background-color:  rgba(128, 128, 128, 0.2);
-    box-shadow: 0 12px 30px -10px var(--aboutMe-skill-card-shade-color-hover);
+    border-color: var(--hab-tags-border-color);
+    background-color:  var(--hab-tags-bg-color-hover);
+    box-shadow: 0 12px 30px -10px var(--hab-tags-shade-color-hover);
 }
 
 .aboutMe-skill-card p{
@@ -77,7 +77,7 @@
     width: 100%;
 }
 .aboutMe-skill-card:hover p, .skill-card-icon {
-    color: var(--aboutMe-skill-card-shade-color-hover);
+    color: var(--hab-tags-shade-color-hover);
     transform: scale(1.06);
 }
 
@@ -88,14 +88,14 @@
 }
 
 .aboutMe-skill-card:hover .skill-card-icon :deep(path){
-    fill: var(--aboutMe-skill-card-shade-color-hover);    
+    fill: var(--hab-tags-shade-color-hover);    
 }
 
 .skill-card-icon :deep(path){
-    fill: var(--me-social-icon-color);
+    fill: var(--social-icon-color);
 }
 
 .colored-text{
-    color: var(--me-text-color);
+    color: var(--title-text-color);
 }
 </style>

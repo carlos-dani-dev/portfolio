@@ -82,11 +82,11 @@ function stopPreview() {
 <style scoped>
 .project-card {
   background-color: var(--project-card-bg-color);
-  border-color: rgba(128, 128, 128, 0.15);
+  border-color: var(--project-card-border-color);
 }
 
 .project-card:hover {
-  border-color: var(--me-tag-skill-border-color, rgba(128, 128, 128, 0.3));
+  border-color: var(--project-card-border-color-hover);
 }
 
 .card-media {
@@ -97,8 +97,7 @@ function stopPreview() {
   aspect-ratio: 16/9;
 }
 
-.thumb,
-.preview-video {
+.thumb, .preview-video {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -121,11 +120,11 @@ function stopPreview() {
 }
 
 .colored-text{
-  color: var(--me-text-color);
+  color: var(--title-text-color);
 }
 
 .skill-tag{
-    border-color: var(--me-tag-skill-border-color);
-    background-color: var(--me-tag-skill-bg-color);
+    border-color: var(--tag-skill-border-color);
+    background-color: var(--tag-skill-bg-color);
 }
 </style>

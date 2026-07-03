@@ -101,46 +101,46 @@ function send_email() {
 
 <style scoped>
 .contact-card {
-  background-color: var(--project-card-bg-color, rgba(128, 128, 128, 0.05));
-  border: 1px solid rgba(128, 128, 128, 0.15);
+  background-color: var(--contact-card-bg-color);
+  border: 1px solid var(--contact-card-border-color);
 }
 
 .input-field {
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: rgba(0, 0, 0, 0.1);
   border: 1px solid rgba(128, 128, 128, 0.2);
   color: inherit;
 }
 
 .input-field:focus {
-  border-color: var(--me-text-color, #8b5cf6);
-  background-color: rgba(0, 0, 0, 0.3);
+  border-color: var(--contact-input-focus-border-color);
+  background-color: rgba(0, 0, 0, 0.2);
 }
 
 .colored-text {
-  color: var(--me-text-color);
+  color: var(--title-text-color);
 }
 
 .submit-btn {
   background-color: transparent;
-  color: var(--me-text-color);
-  border: 1px solid var(--me-text-color);
+  color: var(--title-text-color);
+  border: 1px solid var(--title-text-color);
   cursor: pointer;
 }
 
 .submit-btn:hover {
-  color: var(--me-tag-skill-bg-color);
-  background-color: var(--me-tag-skill-border-color, rgba(139, 92, 246, 0.1));
+  color: var(--contact-submit-btn-text-color-hover);
+  background-color: var(--contact-submit-btn-bg-color-hover);
 }
 
 .social-tag{
-    border: 1px solid rgba(128, 128, 128, 0.15);
-    background-color: var(--me-tag-skill-bg-color);
+  border: 1px solid var(--contact-social-tag-border-color);
+    background-color: var(--contact-social-tag-bg-color);
 }
 .social-icon:deep(path) {
-  fill: var(--me-social-icon-color);
+  fill: var(--social-icon-color);
 }
 
 .social-tag:hover {
-  background-color: var(--me-tag-skill-border-color);
+  background-color: var(--title-text-color);
 }
 </style>

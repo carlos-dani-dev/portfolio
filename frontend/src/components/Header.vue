@@ -39,7 +39,7 @@
                 </select>
             </div>
             <div>
-                <input v-on:change="themeStore.changeTheme()" id="checkboxInput" type="checkbox" />
+              <input :checked="themeStore.isDark" v-on:change="themeStore.changeTheme()" id="checkboxInput" type="checkbox" />
                 <label class="toggleSwitch" for="checkboxInput">
                 <div class="icon icon--moon">
                     <svg
@@ -149,22 +149,22 @@ select option {
   opacity: 0;
 }
 
-#checkboxInput:not(:checked) + .toggleSwitch .icon--sun {
+#checkboxInput:not(:checked) + .toggleSwitch .icon--moon {
   transform: rotate(360deg) scale(1);
   opacity: 1;
 }
 
-#checkboxInput:not(:checked) + .toggleSwitch .icon--moon {
+#checkboxInput:not(:checked) + .toggleSwitch .icon--sun {
   transform: rotate(0deg) scale(0);
   opacity: 0;
 }
 
-#checkboxInput:checked + .toggleSwitch .icon--moon {
+#checkboxInput:checked + .toggleSwitch .icon--sun {
   transform: rotate(360deg) scale(1);
   opacity: 1;
 }
 
-#checkboxInput:checked + .toggleSwitch .icon--sun {
+#checkboxInput:checked + .toggleSwitch .icon--moon {
   transform: rotate(0deg) scale(0);
   opacity: 0;
 }
