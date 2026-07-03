@@ -27,11 +27,17 @@ export default {
         title: "Ecossistema de Domínio",
         description: "Linguagens, **frameworks** e **ferramentas** que utilizo no desenvolvimento diário."
     },
-    projects: {
+    projects_locale: {
         title: "Projetos mais relevantes",
         section_description: "Aqui apresento minhas principais contribuições **profissionais** e **acadêmicas**.",
-        project1_title: "Template de **Chatbot Vue.js**",
-        project1_description: "Um template baseado em **Vue.js** de um chatbot cujo backend implementa o **protocolo de comunicação** entre assistentes de **IA Generativa OpenAI-Like**."
+        project_btn_label: "Ver projeto",
+        items: {
+            vue_chatbot: {
+            title: "Template de **Chatbot Vue.js**",
+            description: "Um template baseado em **Vue.js** de um chatbot cujo backend implementa o **protocolo de comunicação** entre assistentes de **IA Generativa OpenAI-Like**.",
+            tags: ["Vue.js", "FastAPI", "PostgreSQL"]
+            }
+        }
     },
     experiences: {
         title: "Experiência profissional",

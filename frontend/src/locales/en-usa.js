@@ -27,11 +27,17 @@ export default {
         title: "Domain Ecosystem",
         description: "Languages, **frameworks**, and **tools** I use in my daily development work."
     },
-    projects: {
-        title: "Most Relevant Projects",
-        section_description: "Here are my main **professional** and **academic** contributions.",
-        project1_title: "**Vue.js Chatbot** Template",
-        project1_description: "A **Vue.js**-based chatbot template whose backend implements the **communication protocol** between **OpenAI-like Generative AI** assistants."
+    projects_locale: {
+        title: "Most relevant projects",
+        section_description: "Here I present my main **professional** and **academic** contributions.",
+        project_btn_label: "View project",
+        items: {
+            vue_chatbot: {
+            title: "**Vue.js Chatbot** Template",
+            description: "A **Vue.js**-based chatbot template whose backend implements the **communication protocol** for **OpenAI-like Generative AI** assistants.",
+            tags: ["Vue.js", "FastAPI", "PostgreSQL"]
+            }
+        }
     },
     experiences: {
         title: "Professional Experience",
