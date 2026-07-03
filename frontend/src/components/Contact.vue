@@ -38,10 +38,10 @@ function send_email() {
   </div>
 
   <div class="flex gap-3 mb-6 justify-center">
-    <a class="skill-tag w-20 h-20 flex items-center justify-center">
+    <a href="https://github.com/carlos-dani-dev" class="social-tag w-20 h-20 flex items-center justify-center">
         <GithubIcon class="social-icon"></GithubIcon>
     </a>
-    <a class="skill-tag w-20 h-20 flex items-center justify-center">
+    <a href="https://www.linkedin.com/in/carlos-daniel-5794a3311" class="social-tag w-20 h-20 flex items-center justify-center">
         <LinkedinIcon class="social-icon"></LinkedinIcon>
     </a>
   </div>
@@ -128,15 +128,19 @@ function send_email() {
 }
 
 .submit-btn:hover {
-  background-color: var(--me-tag-skill-bg-color, rgba(139, 92, 246, 0.1));
-  transform: translateY(-2px);
+  color: var(--me-tag-skill-bg-color);
+  background-color: var(--me-tag-skill-border-color, rgba(139, 92, 246, 0.1));
 }
 
-.skill-tag{
-    border-color: var(--me-tag-skill-border-color);
+.social-tag{
+    border: 1px solid rgba(128, 128, 128, 0.15);
     background-color: var(--me-tag-skill-bg-color);
 }
-.social-icon :deep(path) {
+.social-icon:deep(path) {
   fill: var(--me-social-icon-color);
+}
+
+.social-tag:hover {
+  background-color: var(--me-tag-skill-border-color);
 }
 </style>

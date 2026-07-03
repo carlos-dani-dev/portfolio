@@ -1,10 +1,12 @@
 export default {
     nav: {
+        home: "Início",
         about: "Sobre mim",
         stack: "Stacks",
         projects: "Projetos",
         experiences: "Experiências",
-        contact: "Contato"
+        contact: "Contato",
+        resume: "Currículo"
     },
     me: {
         ml_researcher_skill_tag: "Pesquisador de Machine Learning",
@@ -51,5 +53,57 @@ export default {
         message_label: "Mensagem",
         message_ph: "Escreva sua mensagem aqui...",
         send_btn: "Enviar email"
+    },
+    resume: {
+        download_btn: "Baixar Currículo",
+        name: "Carlos Daniel Portela",
+        role: "Desenvolvedor de Software & Pesquisador em IA",
+        contact_linkedin: "in/carlosdanielportela",
+        contact_github: "carlos-dani-dev",
+
+        summary_title: "Resumo",
+        summary_text: "Estou me formando em **Ciências da Computação** na UFPI. Sou também **Pesquisador** na área de **DeepFakes** usando **Redes Neurais Densas (DNNs)**. Além disso, atuei como **Desenvolvedor júnior** no **IGDS**, durante a operacionalização do programa **Tá Na Mesa**, no estado da Paraíba. Possuo habilidades em gerenciamento de máquinas na nuvem com **AWS EC2** e **S3**, proficiência **Linux**, além de **SQL** com **PostgreSQL**, **JavaScript** e frameworks Python: **React**, **Vue.js** e **FastAPI** avançado, **SQLAlchemy**, **Langchain**, **Tensorflow**, **Pandas**, **Selenium**, **Jinja**.",
+
+        experience_title: "Experiência Profissional",
+
+        exp_1_role: "Desenvolvedor júnior",
+        exp_1_company: "IGDS, consultoria",
+        exp_1_period: "Fev 2026 — Atual",
+        exp_1_bullet_1: "Captura de informações dos beneficiários do programa por formulário digital",
+        exp_1_bullet_2: "Tratamento de dados brutos e composição de indicadores-chave (KPI's)",
+        exp_1_bullet_3: "Disposição de dados transformados com Python por meio de API FastAPI para consumo e provisionamento de insights com Metabase",
+
+        exp_2_role: "Pesquisador — Detecção de DeepFake",
+        exp_2_company: "LabVip, UFPI",
+        exp_2_period: "Set 2024 — Atual",
+        exp_2_bullet_1: "Análise e review de artigos científicos em inglês",
+        exp_2_bullet_2: "Transformação e preparação das bases de imagens do modelo com Python",
+        exp_2_bullet_3: "Implementação de Rede Neural Densa (DNN) do zero, com Tensorflow, conforme descrito no paper MAAD-Face: A Massively Annotated Attribute Dataset for Face Images",
+        exp_2_bullet_4: "Otimização do desempenho dos scripts de treinamento em GPU e manutenção das máquinas Linux do laboratório",
+
+        exp_3_role: "Estagiário Administrativo",
+        exp_3_company: "Diretoria de Desenvolvimento de Pessoas (SEAD)",
+        exp_3_period: "Abr 2024 — Abr 2026",
+        exp_3_bullet_1: "Tratamento de processos administrativos no SEI",
+        exp_3_bullet_2: "Análise de dados de servidores disponíveis na plataforma SEI, com provisão de insights via PowerBI",
+        exp_3_bullet_3: "Extração automática de decretos e nomeações do DOEPI (Diário Oficial do Estado do Piauí), usando Selenium e a API do Google Gemini",
+        exp_3_bullet_4: "Produção semi-automática de termos aditivos de contratos, usando Google Workspace",
+
+        projects_title: "Projetos",
+        proj_1_name: "WorldCup Chatbot Web responsivo",
+        proj_1_stack: "FastAPI - Vue.js - PostgreSQL - Tailwhind",
+        proj_2_name: "Formulário Web responsivo",
+        proj_2_stack: "FastAPI - PostgreSQL - Jinja - Bootstrap",
+        proj_3_name: "Classificador Massivo de Atributos (dnn)",
+        proj_3_stack: "Tensorflow - Pandas",
+
+        education_title: "Educação",
+        education_degree: "Bacharelado em Ciência da Computação",
+        education_school: "Universidade Federal do Piauí — UFPI",
+        education_period: "Jun 2022 — Atual",
+
+        languages_title: "Idiomas",
+        language_1: "Inglês avançado — escuta, leitura e escrita técnica",
+        language_2: "Português — nativo"
     }
 }

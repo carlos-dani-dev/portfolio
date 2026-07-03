@@ -1,50 +1,51 @@
 export default {
     nav: {
-        about: "About me",
+        home: "Home",
+        about: "About Me",
         stack: "Stack",
         projects: "Projects",
-        experiences: "Experiences",
-        contact: "Contact"
+        experiences: "Experience",
+        contact: "Contact",
+        resume: "Resume"
     },
     me: {
         ml_researcher_skill_tag: "Machine Learning Researcher",
         fs_skill_tag: "Fullstack Developer",
-        hello: "Hi, i am",
-        intro: "**Fullstack Developer** and **Machine Learning** researcher. Focused on **solutions** that combine **optimization** with **Generative AI** models, connecting product, data, and automation."
+        hello: "Hi, I'm",
+        intro: "**Fullstack Developer** and **Machine Learning** researcher. Focused on **solutions** that combine **optimization** with **Generative AI** models, integrating product, data, and automation."
     },
     aboutMe: {
-        title: "About me",
-        section_description: "A brief introduction to the **experiences** that have shaped me and the **values** that define me.",
-        paragraph1: "I'm Carlos Daniel Portela, 22 years old, and I'm finishing my degree in Computer Science " +
-            "at the **Federal University of Piauí** (UFPI). Here, I've been sharpening my skills in **software development** and **applied research** through real, impactful projects. I'm comfortable working across every layer of an application, and I'm also able to build solutions integrated with **Generative AI** models, as well as deploy them to the cloud, mainly using **AWS**.",
-        paragraph2: "At **UFPI**, I developed projects related to **Generative AI** and I'm currently part of the **Computer Vision** lab, **LabVip**. Outside of academia, I maintained a full **data pipeline** for **IGDS**, the Institute for Management and Sustainable Development.",
+        title: "About Me",
+        section_description: "A brief introduction to the **experiences** that shaped me and the **values** that describe me.",
+        paragraph1: "I'm Carlos Daniel Portela, 22 years old, currently finishing my degree in **Computer Science** at the **Federal University of Piauí**. Here, I'm sharpening my skills in **software development** and **applied research** through real, impactful projects. I'm comfortable across every layer of an application and able to build solutions integrated with **Generative AI** models, as well as deploy them to the cloud, mainly with **AWS**.",
+        paragraph2: "At **UFPI**, I developed projects related to **Generative AI** and I'm currently part of the **Computer Vision lab, LabVip**. Outside academia, I maintained a full **data pipeline** for **IGDS**, the Institute for Management and Sustainable Development.",
         backend: "**APIs** & Backend",
-        ai: "**Generative AI** Integrations",
-        research: "Applied **ML** Research"
+        ai: "**Generative AI** integrations",
+        research: "Applied **ML** research"
     },
     stacks: {
         title: "Domain Ecosystem",
-        description: "Languages, **frameworks**, and **tools** I use in my day-to-day development."
+        description: "Languages, **frameworks**, and **tools** I use in my daily development work."
     },
     projects: {
         title: "Most Relevant Projects",
-        section_description: "Here I present my main **professional** and **academic** contributions.",
-        project1_title: "**Vue.js** Chatbot Template",
-        project1_description: "A **Vue.js**-based chatbot template whose backend implements the **communication protocol** between **OpenAI-like generative AI assistants**."
+        section_description: "Here are my main **professional** and **academic** contributions.",
+        project1_title: "**Vue.js Chatbot** Template",
+        project1_description: "A **Vue.js**-based chatbot template whose backend implements the **communication protocol** between **OpenAI-like Generative AI** assistants."
     },
     experiences: {
         title: "Professional Experience",
         section_description: "These are the experiences that best represent my work as a **developer** and **researcher**.",
-        xp_1_title: "CNPQ Machine Learning Researcher",
+        xp_1_title: "CNPq Machine Learning Researcher",
         xp_1_date: "August 2024 - Present",
-        xp_1_description: "I am responsible for the original implementation of the **Massive Attribute Classifier**, conceived by German researcher Terhörst, in **MAAD-Face**: A Massively Annotated Attribute Dataset for Face Images. The classifier is a fundamental part of one of the PhD projects at this lab I'm part of, **LabVip**.",
-        xp_2_title: "Jr. Data Analyst",
+        xp_1_description: "I'm responsible for the first-ever implementation of the **Massive Attribute Classifier**, conceived by German researcher Terhörst, in **MAAD-Face**: A Massively Annotated Attribute Dataset for Face Images. The classifier is a core part of a PhD project at the lab I'm part of, **LabVip**.",
+        xp_2_title: "Jr Data Analyst",
         xp_2_date: "February 2026 - June 2026",
-        xp_2_description: "I worked as a data consultant for **IGDS** for 5 months. I was responsible for creating and maintaining a complete **data pipeline** focused on monitoring the operationalization of the largest food insecurity public policy in the Northeast, the **Tá Na Mesa Program**. Working closely with my manager, who served as the point of contact with the State Secretariat of Human Development, we designed a complete **KPI tree** that formed the basis of our **monitoring framework**. The work culminated in a full **BI Dashboard**, built in **Metabase**, which fed into the final reports presented to the Secretariat."
+        xp_2_description: "I worked as a data consultant for **IGDS** for 5 months. I was responsible for building and maintaining a complete **data pipeline** focused on monitoring the rollout of the largest food-insecurity public policy in Brazil's Northeast, the **Tá Na Mesa Program**. Working closely with my manager, who liaised with the State Secretariat of Human Development, we designed a full **KPI tree** that underpinned our **monitoring framework**. The work culminated in a complete **BI Dashboard**, built in **Metabase**, that fed the final reports presented to the secretariat."
     },
     contact: {
-        title: "Get in touch",
-        section_description: "Feel free to reach out to me for **opportunities**, **projects**, or **questions**. I'll respond as soon as possible.",
+        title: "Get in Touch",
+        section_description: "Feel free to reach out for **opportunities**, **projects**, or **questions**. I'll get back to you as soon as possible.",
         name_label: "Name",
         name_ph: "Your name",
         email_label: "Email",
@@ -52,6 +53,57 @@ export default {
         message_label: "Message",
         message_ph: "Write your message here...",
         send_btn: "Send email"
-    }
+    },
+    resume: {
+        download_btn: "Download Resume",
+        name: "Carlos Daniel Portela",
+        role: "Software Developer & AI Researcher",
+        contact_linkedin: "in/carlosdanielportela",
+        contact_github: "@carlos-dani-dev",
 
+        summary_title: "Summary",
+        summary_text: "I'm finishing my degree in **Computer Science** at UFPI. I'm also a **Researcher** in **DeepFakes** using **Dense Neural Networks (DNNs)**. I've also worked as a **Junior Developer** at **IGDS**, during the rollout of the **Tá Na Mesa Program**, in the state of Paraíba. I have skills in cloud machine management with **AWS EC2** and **S3**, **Linux** proficiency, plus **SQL** with **PostgreSQL**, **JavaScript**, and Python frameworks: **React**, **Vue.js**, and advanced **FastAPI**, **SQLAlchemy**, **Langchain**, **Tensorflow**, **Pandas**, **Selenium**, **Jinja**.",
+
+        experience_title: "Professional Experience",
+
+        exp_1_role: "Junior Developer",
+        exp_1_company: "IGDS, consulting",
+        exp_1_period: "Feb 2026 — Present",
+        exp_1_bullet_1: "Captured beneficiary information for the program through a digital form",
+        exp_1_bullet_2: "Processed raw data and built key performance indicators (KPIs)",
+        exp_1_bullet_3: "Served transformed data with Python through a FastAPI API for consumption and insight delivery via Metabase",
+
+        exp_2_role: "Researcher — DeepFake Detection",
+        exp_2_company: "LabVip, UFPI",
+        exp_2_period: "Sep 2024 — Present",
+        exp_2_bullet_1: "Reviewed and analyzed scientific papers in English",
+        exp_2_bullet_2: "Transformed and prepared the model's image datasets with Python",
+        exp_2_bullet_3: "Implemented a Dense Neural Network (DNN) from scratch with Tensorflow, as described in the MAAD-Face paper: A Massively Annotated Attribute Dataset for Face Images",
+        exp_2_bullet_4: "Optimized GPU training script performance and maintained the lab's Linux machines",
+
+        exp_3_role: "Administrative Intern",
+        exp_3_company: "People Development Board (SEAD)",
+        exp_3_period: "Apr 2024 — Apr 2026",
+        exp_3_bullet_1: "Handled administrative processes in SEI",
+        exp_3_bullet_2: "Analyzed employee data available on the SEI platform, providing insights via PowerBI",
+        exp_3_bullet_3: "Automated extraction of decrees and appointments from DOEPI (Piauí's Official State Gazette), using Selenium and the Google Gemini API",
+        exp_3_bullet_4: "Semi-automated the production of contract amendment terms, using Google Workspace",
+
+        projects_title: "Projects",
+        proj_1_name: "WorldCup Chatbot Web",
+        proj_1_stack: "FastAPI - Vue.js - PostgreSQL - Tailwind",
+        proj_2_name: "Responsive Web Form",
+        proj_2_stack: "FastAPI - PostgreSQL - Jinja - Bootstrap",
+        proj_3_name: "Massive Attribute Classifier (DNN)",
+        proj_3_stack: "Tensorflow - Pandas",
+
+        education_title: "Education",
+        education_degree: "Bachelor's Degree in Computer Science",
+        education_school: "Federal University of Piauí — UFPI",
+        education_period: "Jun 2022 — Present",
+
+        languages_title: "Languages",
+        language_1: "Advanced English — listening, reading, and technical writing",
+        language_2: "Native Portuguese"
+    }
 }

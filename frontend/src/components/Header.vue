@@ -16,18 +16,21 @@
 
     <div :page-theme="themeStore.currentTheme" class="flex justify-between items-center">
 
-        <h1 class="text-x1 font-bold pl-2">Carlos Portela</h1>
+        <h1 class="carlos-logo text-x2 font-bold pl-2">
+          Carlos Portela
+        </h1>
 
         <div class="items-center">
-            <ul class="flex flex-wrap gap-3">
+            <ul class="flex flex-wrap gap-5">
                 <li><a href="#aboutMe-section" class="nav-a">{{ t('nav.about') }}</a></li>
                 <li><a href="#stacks-section" class="nav-a">{{ t('nav.stack') }}</a></li>
                 <li><a href="#projects-section" class="nav-a">{{ t('nav.projects') }}</a></li>
                 <li><a href="#experiences-section" class="nav-a">{{ t('nav.experiences') }}</a></li>
                 <li><a href="#contact-section" class="nav-a">{{t('nav.contact')}}</a></li>
-            </ul>
+                <li><router-link to="/home/resume" class="nav-a underline">{{t('nav.resume')}}</router-link></li>
+              </ul>
         </div>
-
+        
         <div class="flex gap-3 items-center text-x1 font-bold">
             <div>
                 <select :value="langStore.currentLang" @change="langStore.setLang($event.target.value)">

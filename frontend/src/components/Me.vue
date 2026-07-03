@@ -26,10 +26,10 @@
         <MarkdownText :content="t('me.intro')" />
     </p>
     <div class="flex gap-3 mb-6">
-        <a class="skill-tag w-10 h-10 rounded-full border flex items-center justify-center">
+        <a href="https://github.com/carlos-dani-dev" class="social-tag w-10 h-10 rounded-full border flex items-center justify-center">
             <GithubIcon class="social-icon"></GithubIcon>
         </a>
-        <a class="skill-tag w-10 h-10 rounded-full border flex items-center justify-center">
+        <a href="https://www.linkedin.com/in/carlos-daniel-5794a3311" class="social-tag w-10 h-10 rounded-full border flex items-center justify-center">
             <LinkedinIcon class="social-icon"></LinkedinIcon>
         </a>
     </div>
@@ -50,7 +50,7 @@
 }
 
 .skill-tag{
-    border-color: var(--me-tag-skill-border-color);
+    border: 1px solid var(--me-tag-skill-border-color);
     background-color: var(--me-tag-skill-bg-color);
 }
 
@@ -58,8 +58,17 @@
     color: var(--me-text-color);
 }
 
-.social-icon :deep(path) {
+.social-tag{
+    border: 1px solid rgba(128, 128, 128, 0.15);
+    background-color: var(--me-tag-skill-bg-color);
+}
+.social-icon:deep(path) {
   fill: var(--me-social-icon-color);
 }
+
+.social-tag:hover {
+  background-color: var(--me-tag-skill-border-color);
+}
+
 
 </style>
