@@ -8,8 +8,6 @@ import { useI18n } from 'vue-i18n';
 
 const { t } = useI18n()
 
-// 1. Removida a necessidade do `ref(null)` aninhado. 
-// Usaremos apenas uma propriedade vazia para guardar o elemento HTML.
 const projects = [
   {
     key: 'vue_chatbot',
@@ -19,13 +17,10 @@ const projects = [
     video: previewVueTemplate,
     tags: ['Vue.js', 'FastAPI', 'PostgreSQL'],
     projectLink: "https://github.com/carlos-dani-dev/vue-chatbot-template",
-    videoElement: null // Alterado aqui
+    videoElement: null
   }
 ]
 
-// Apague o const videoRef = ref(null); global que estava aqui.
-
-// 2. As funções agora recebem o projeto específico como parâmetro
 function playPreview(project) {
   if (project.videoElement) {
     project.videoElement.currentTime = 0;
