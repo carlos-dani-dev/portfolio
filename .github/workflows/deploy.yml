@@ -1,4 +1,4 @@
-name: Deploy to GitHub Pages
+name: Deploy Vue Project to GitHub Pages
 
 on:
   push:
@@ -16,8 +16,21 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
+      - name: Checkout repository
         uses: actions/checkout@v4
+        
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20 # Prepara o ambiente Node para rodar o Vue
+          
+      - name: Install dependencies
+        working-directory: ./frontend
+        run: npm install
+        
+      - name: Build project
+        working-directory: ./frontend
+        run: npm run build # Isso gera a pasta 'dist' pronta para produção
         
       - name: Setup Pages
         uses: actions/configure-pages@v4
@@ -25,7 +38,8 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: './frontend' 
+          # Aqui está a mágica: agora enviamos apenas a pasta 'dist' gerada pelo build
+          path: './frontend/dist' 
           
       - name: Deploy to GitHub Pages
         id: deployment
