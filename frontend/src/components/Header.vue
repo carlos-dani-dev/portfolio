@@ -1,4 +1,5 @@
 <script setup>
+    import { ref } from 'vue';
     import { useI18n } from 'vue-i18n';
 
     import { useLangStore } from '@/stores/langStore';
@@ -8,19 +9,30 @@
     const langStore = useLangStore()
     const themeStore = useThemeStore()
 
+    const isMenuOpen = ref(false)
+
+    function toggleMenu() {
+        isMenuOpen.value = !isMenuOpen.value
+    }
+
+    function closeMenu() {
+        isMenuOpen.value = false
+    }
+
 </script>
 
 <template>
 
 <nav class="nav-header fixed top-0 left-0 right-0 z-50 w-full">
 
-    <div :page-theme="themeStore.currentTheme" class="flex justify-between items-center">
+    <div :page-theme="themeStore.currentTheme" class="flex justify-between items-center px-4 md:px-6">
 
-        <h1 class="carlos-logo text-x2 font-bold pl-2">
+        <h1 class="carlos-logo text-x2 font-bold">
           Carlos Portela
         </h1>
 
-        <div class="items-center">
+        <!-- Desktop nav links -->
+        <div class="hidden md:flex items-center">
             <ul class="flex flex-wrap gap-5">
                 <li><a href="#aboutMe-section" class="nav-a">{{ t('nav.about') }}</a></li>
                 <li><a href="#stacks-section" class="nav-a">{{ t('nav.stack') }}</a></li>
@@ -28,10 +40,10 @@
                 <li><a href="#experiences-section" class="nav-a">{{ t('nav.experiences') }}</a></li>
                 <li><a href="#contact-section" class="nav-a">{{t('nav.contact')}}</a></li>
                 <li><router-link to="/home/resume" class="nav-a underline">{{t('nav.resume')}}</router-link></li>
-              </ul>
+            </ul>
         </div>
         
-        <div class="flex gap-3 items-center text-x1 font-bold">
+        <div class="flex gap-1 items-center text-x1 font-bold">
             <div>
                 <select :value="langStore.currentLang" @change="langStore.setLang($event.target.value)">
                     <option value="pt-br">pt-BR</option>
@@ -73,9 +85,32 @@
                     </svg>
                 </div>
                 </label>
-
             </div>
+
+            <!-- Hamburger button — visible only on mobile -->
+            <button
+                class="hamburger-btn md:hidden"
+                @click="toggleMenu"
+                :aria-expanded="isMenuOpen"
+                aria-label="Toggle navigation menu"
+            >
+                <span class="hamburger-bar" :class="{ open: isMenuOpen }"></span>
+                <span class="hamburger-bar" :class="{ open: isMenuOpen }"></span>
+                <span class="hamburger-bar" :class="{ open: isMenuOpen }"></span>
+            </button>
         </div>
+    </div>
+
+    <!-- Mobile dropdown menu -->
+    <div class="mobile-menu md:hidden" :class="{ 'mobile-menu--open': isMenuOpen }">
+        <ul class="flex flex-col gap-1 px-4 py-3">
+            <li><a href="#aboutMe-section" class="nav-a mobile-nav-a" @click="closeMenu">{{ t('nav.about') }}</a></li>
+            <li><a href="#stacks-section" class="nav-a mobile-nav-a" @click="closeMenu">{{ t('nav.stack') }}</a></li>
+            <li><a href="#projects-section" class="nav-a mobile-nav-a" @click="closeMenu">{{ t('nav.projects') }}</a></li>
+            <li><a href="#experiences-section" class="nav-a mobile-nav-a" @click="closeMenu">{{ t('nav.experiences') }}</a></li>
+            <li><a href="#contact-section" class="nav-a mobile-nav-a" @click="closeMenu">{{t('nav.contact')}}</a></li>
+            <li><router-link to="/home/resume" class="nav-a mobile-nav-a underline" @click="closeMenu">{{t('nav.resume')}}</router-link></li>
+        </ul>
     </div>
 
 </nav>
@@ -97,6 +132,78 @@ select option {
 
 .nav-a:hover{
     color: var(--nav-a-text-color-hover);
+}
+
+/* Mobile nav link style */
+.mobile-nav-a {
+    display: block;
+    padding: 10px 8px;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.mobile-nav-a:hover {
+    background-color: rgba(128, 128, 128, 0.08);
+}
+
+/* Hamburger button */
+.hamburger-btn {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    width: 40px;
+    height: 40px;
+    padding: 4px;
+    border-radius: 8px;
+    transition: background-color 0.2s ease;
+}
+
+.hamburger-btn:hover {
+    background-color: rgba(128, 128, 128, 0.1);
+}
+
+.hamburger-bar {
+    display: block;
+    width: 22px;
+    height: 2px;
+    background-color: var(--color-text);
+    border-radius: 2px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    transform-origin: center;
+}
+
+/* Animate bars into X when open */
+.hamburger-bar:nth-child(1).open {
+    transform: translateY(7px) rotate(45deg);
+}
+.hamburger-bar:nth-child(2).open {
+    opacity: 0;
+    transform: scaleX(0);
+}
+.hamburger-bar:nth-child(3).open {
+    transform: translateY(-7px) rotate(-45deg);
+}
+
+/* Mobile dropdown */
+.mobile-menu {
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.35s ease, opacity 0.25s ease;
+    opacity: 0;
+    border-top: 1px solid transparent;
+}
+
+.mobile-menu--open {
+    max-height: 400px;
+    opacity: 1;
+    border-top-color: rgba(128, 128, 128, 0.15);
 }
 
 .toggleSwitch {

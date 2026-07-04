@@ -37,7 +37,7 @@ function stopPreview(project) {
 </script>
 
 <template>
-  <section id="projects-section" class="py-12 max-w-10xl mx-auto px-8">
+  <section id="projects-section" class="py-12 max-w-10xl mx-auto px-4 md:px-8">
     
     <div class="text-center mb-16">
       <h2 class="colored-text text-4xl md:text-5xl font-bold tracking-tight mb-4">{{ t('projects_locale.title') }}</h2>

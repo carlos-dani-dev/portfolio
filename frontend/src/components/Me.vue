@@ -10,7 +10,7 @@
 
 <template>
 
-<section class="p-12 max-w-6xl mx-auto flex flex-col-reverse lg:grid lg:grid-cols-[1fr_auto] gap-12 lg:gap-24 items-center justify-between">
+<section class="p-6 lg:p-12 max-w-6xl mx-auto flex flex-col-reverse lg:grid lg:grid-cols-[1fr_auto] gap-8 lg:gap-24 items-center justify-between">
   <div>
     <div class="flex gap-2">
         <span class="colored-text skill-tag inline-flex border rounded-full px-3.5 py-1.5 text-sm mb-6">
@@ -21,7 +21,7 @@
         </span>
     </div>
     <p class="text-xl mb-2"><MarkdownText :content="t('me.hello')" /></p>
-    <h1 class="colored-text lg:text-7xl font-bold mb-6 tracking-tight">Carlos Portela</h1>
+    <h1 class="colored-text text-5xl lg:text-7xl font-bold mb-6 tracking-tight">Carlos Portela</h1>
     <p class="leading-relaxed text-xl opacity-80  mb-8">
         <MarkdownText :content="t('me.intro')" />
     </p>
@@ -36,7 +36,7 @@
     <div class="flex gap-3">
     </div>
   </div>
-  <div class="img-mockup lg:w-[430px] lg:h-[430px] rounded-full overflow-hidden mx-auto">
+  <div class="img-mockup w-56 h-56 lg:w-[430px] lg:h-[430px] rounded-full overflow-hidden mx-auto">
         <img :src="meImage" alt="Carlos Portela" class="w-full h-full object-cover" />
   </div>
 </section>

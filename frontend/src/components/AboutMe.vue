@@ -10,7 +10,7 @@
 
 <template>
 
-<section id="aboutMe-section" class="flex flex-col items-center py-12">
+<section id="aboutMe-section" class="flex flex-col items-center py-12 px-6">
     <div class="flex flex-col items-center py-10">
         <h2 class="colored-text lg:text-5xl font-bold tracking-tight mb-4">{{ t('aboutMe.title') }}</h2>
         <p class="text-lg opacity-80 max-w-1xl"><MarkdownText :content="t('aboutMe.section_description')" /></p>
@@ -26,7 +26,7 @@
         </p>
     </div>
 
-    <div class="flex justify-center items-center text-lg font-semibold py-10 gap-10">
+    <div class="flex flex-col md:flex-row justify-center items-center text-lg font-semibold py-10 gap-6 md:gap-10">
         <div class="aboutMe-skill-card">
             <ServerIcon class="skill-card-icon"></ServerIcon>
             <p><MarkdownText :content="t('aboutMe.backend')" /></p>
@@ -50,7 +50,8 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 300px;
+    width: 100%;
+    max-width: 300px;
     height: 140px;
     gap: 12px;
     border: 1px solid rgba(128, 128, 128, 0.15);
