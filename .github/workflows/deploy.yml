@@ -22,7 +22,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 20 # Prepara o ambiente Node para rodar o Vue
+          node-version: 24
           
       - name: Install dependencies
         working-directory: ./frontend
@@ -30,7 +30,11 @@ jobs:
         
       - name: Build project
         working-directory: ./frontend
-        run: npm run build # Isso gera a pasta 'dist' pronta para produção
+        run: npm run build
+
+      - name: Create 404 fallback
+        working-directory: ./frontend
+        run: cp dist/index.html dist/404.html
         
       - name: Setup Pages
         uses: actions/configure-pages@v4
@@ -38,7 +42,6 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          # Aqui está a mágica: agora enviamos apenas a pasta 'dist' gerada pelo build
           path: './frontend/dist' 
           
       - name: Deploy to GitHub Pages
