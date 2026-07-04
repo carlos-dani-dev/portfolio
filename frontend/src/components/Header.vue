@@ -153,7 +153,6 @@ select option {
     background: transparent;
     border: none;
     cursor: pointer;
-    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -163,6 +162,14 @@ select option {
     padding: 4px;
     border-radius: 8px;
     transition: background-color 0.2s ease;
+    /* Only show on mobile */
+    display: none;
+}
+
+@media (max-width: 767px) {
+    .hamburger-btn {
+        display: flex;
+    }
 }
 
 .hamburger-btn:hover {
