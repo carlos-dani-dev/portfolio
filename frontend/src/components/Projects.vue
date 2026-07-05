@@ -4,11 +4,24 @@ import MarkdownText from '@/components/MarkdownText.vue'
 import thumbVueTemplate from '@/assets/images/thumb-vue-template.png'
 import previewVueTemplate from '@/assets/videos/preview-vue-template.mp4'
 
+import RightArrow from '@/assets/icons/right-arrow.svg'
+import LeftArrow from '@/assets/icons/left-arrow.svg'
+
 import { useI18n } from 'vue-i18n';
 
 const { t } = useI18n()
 
 const projects = [
+  {
+    key: 'vue_chatbot',
+    titleKey: 'projects_locale.items.vue_chatbot.title',
+    descriptionKey: 'projects_locale.items.vue_chatbot.description',
+    thumb: thumbVueTemplate,
+    video: previewVueTemplate,
+    tags: ['Vue.js', 'FastAPI', 'PostgreSQL'],
+    projectLink: "https://github.com/carlos-dani-dev/vue-chatbot-template",
+    videoElement: null
+  },
   {
     key: 'vue_chatbot',
     titleKey: 'projects_locale.items.vue_chatbot.title',
@@ -46,59 +59,62 @@ function stopPreview(project) {
       </p>
     </div>
 
-    <div
-      v-for="project in projects" :key="project.key"
-      class="project-card overflow-hidden border flex flex-col max-w-[1000px] mx-auto w-full rounded-2xl transition-all duration-300 hover:-translate-y-1 cursor-pointer">
-      
-      <div
-        class="card-media"
-        @mouseenter="playPreview(project)"
-        @mouseleave="stopPreview(project)"
-      >
-        <img :src="project.thumb" class="thumb" alt="Preview" />
-        
-        <video
-          :ref="(el) => project.videoElement = el"
-          :src="project.video"
-          class="preview-video"
-          muted
-          loop
-          playsinline
-          preload="metadata"
-        ></video>
-      </div>
-
-      <div class="flex flex-col gap-4 p-3">
-        
-        <div class="flex justify-between items-center">
-          <p class="colored-text text-3xl font-semibold"><MarkdownText :content="t(project.titleKey)" /></p>
+    <div class="carousel-wrapper">
+      <ul class="carousel">
+        <li
+          v-for="project in projects" :key="project.key"
+          class="project-card carousel-item overflow-hidden border flex flex-col max-w-[1000px] mx-auto w-full rounded-2xl transition-all duration-300 hover:-translate-y-1 cursor-pointer">
           
-          <a 
-            :href="project.projectLink" 
-            target="_blank" 
-            rel="noopener noreferrer"
-            class="project-btn inline-flex items-center gap-2 px-5 py-2 font-semibold transition-all duration-300"
+          <div
+            class="card-media"
+            @mouseenter="playPreview(project)"
+            @mouseleave="stopPreview(project)"
           >
-            {{t('projects_locale.project_btn_label')}}
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <line x1="7" y1="17" x2="17" y2="7"></line>
-              <polyline points="7 7 17 7 17 17"></polyline>
-            </svg>
-          </a>
-        </div>
-        
-        <div class="flex flex-wrap gap-3">
-          <span
-            v-for="tag in project.tags" :key="tag"
-            class="colored-text skill-tag inline-flex border rounded-full px-3.5 py-1.5 text-sm"
-            >{{ tag }}</span>
-        </div>
+            <img :src="project.thumb" class="thumb" alt="Preview" />
+            
+            <video
+              :ref="(el) => project.videoElement = el"
+              :src="project.video"
+              class="preview-video"
+              muted
+              loop
+              playsinline
+              preload="metadata"
+            ></video>
+          </div>
 
-        <p class="">
-          <MarkdownText :content="t(project.descriptionKey)" />
-        </p>
-      </div>
+          <div class="flex flex-col gap-4 p-3">
+            
+            <div class="flex justify-between items-center">
+              <p class="colored-text text-3xl font-semibold"><MarkdownText :content="t(project.titleKey)" /></p>
+              
+              <a 
+                :href="project.projectLink" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                class="project-btn inline-flex items-center gap-2 px-5 py-2 font-semibold transition-all duration-300"
+              >
+                {{t('projects_locale.project_btn_label')}}
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="7" y1="17" x2="17" y2="7"></line>
+                  <polyline points="7 7 17 7 17 17"></polyline>
+                </svg>
+              </a>
+            </div>
+            
+            <div class="flex flex-wrap gap-3">
+              <span
+                v-for="tag in project.tags" :key="tag"
+                class="colored-text skill-tag inline-flex border rounded-full px-3.5 py-1.5 text-sm"
+                >{{ tag }}</span>
+            </div>
 
+            <p class="">
+              <MarkdownText :content="t(project.descriptionKey)" />
+            </p>
+          </div>
+        </li>
+      </ul>
     </div>
 
   </section>
@@ -176,4 +192,31 @@ function stopPreview(project) {
   transform: translate(2px, -2px);
 }
 
+.carousel {
+  display: flex;
+  gap: 1rem;
+  list-style: none;
+  padding: 8px;
+  margin: 0;
+  
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  
+  scroll-marker-group: after;
+}
+
+.carousel::-webkit-scrollbar {
+  display: none;
+}
+
+.carousel-item {
+  flex: 0 0 100%;
+  min-height: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  
+  scroll-snap-align: center;
+}
 </style>
