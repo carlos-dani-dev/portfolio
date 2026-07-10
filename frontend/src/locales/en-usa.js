@@ -36,6 +36,14 @@ export default {
             title: "**Vue.js Chatbot** Template",
             description: "A **Vue.js**-based chatbot template whose backend implements the **communication protocol** for **OpenAI-like Generative AI** assistants.",
             tags: ["Vue.js", "FastAPI", "PostgreSQL"]
+            },
+            tanamesa_pipeline: {
+            title: "Ta Na Mesa **Data Pipeline**",
+            description: "A comprehensive **data pipeline** for **monitoring** the implementation of the public policy on food insecurity that covers the **entire state of Paraíba**"
+            },
+            portfolio: {
+                title: "Professional resume",
+                description: "My **fully responsive** professional portfolio, developed with **Vue** and **Tailwind** and cached using **Pinia** for language and theme control.",
             }
         }
     },

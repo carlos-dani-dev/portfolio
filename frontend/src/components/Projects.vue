@@ -3,6 +3,10 @@ import MarkdownText from '@/components/MarkdownText.vue'
 
 import thumbVueTemplate from '@/assets/images/thumb-vue-template.png'
 import previewVueTemplate from '@/assets/videos/preview-vue-template.mp4'
+import thumbTanamesaPipeline from '@/assets/images/thumb-tanamesa-pipe.png'
+import previewTanamesaPipeline from '@/assets/videos/preview-tanamesa-pipe.mp4'
+import thumbPortfolio from '@/assets/images/thumb-portfolio.png'
+import previewPortfolio from '@/assets/videos/preview-portfolio.mp4'
 
 import RightArrow from '@/assets/icons/right-arrow.svg'
 import LeftArrow from '@/assets/icons/left-arrow.svg'
@@ -23,13 +27,23 @@ const projects = [
     videoElement: null
   },
   {
-    key: 'vue_chatbot',
-    titleKey: 'projects_locale.items.vue_chatbot.title',
-    descriptionKey: 'projects_locale.items.vue_chatbot.description',
-    thumb: thumbVueTemplate,
-    video: previewVueTemplate,
-    tags: ['Vue.js', 'FastAPI', 'PostgreSQL'],
-    projectLink: "https://github.com/carlos-dani-dev/vue-chatbot-template",
+    key: 'tanamesa_pipeline',
+    titleKey: 'projects_locale.items.tanamesa_pipeline.title',
+    descriptionKey: 'projects_locale.items.tanamesa_pipeline.description',
+    thumb: thumbTanamesaPipeline,
+    video: previewTanamesaPipeline,
+    tags: ['SQL', 'PostgreSQL', 'FastAPI'],
+    projectLink: "https://github.com/carlos-dani-dev/tanamesa-data-pipeline",
+    videoElement: null
+  },
+  {
+    key: 'portfolio',
+    titleKey: 'projects_locale.items.portfolio.title',
+    descriptionKey: 'projects_locale.items.portfolio.description',
+    thumb: thumbPortfolio,
+    video: previewPortfolio,
+    tags: ['Vue', 'Tailwind', 'Javascript'],
+    projectLink: "https://github.com/carlos-dani-dev/portfolio",
     videoElement: null
   }
 ]
