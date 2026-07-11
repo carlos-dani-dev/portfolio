@@ -1,4 +1,6 @@
 <script setup>
+import MarkdownText from '@/components/MarkdownText.vue'
+
 import { useI18n } from 'vue-i18n';
 
 import { useLangStore } from '@/stores/langStore';
@@ -10,6 +12,71 @@ const themeStore = useThemeStore()
 
 themeStore.initTheme()
 langStore.initLang()
+
+const projects = [
+  {
+    key: 'vue_chatbot',
+    titleKey: 'projects_locale.items.vue_chatbot.title',
+    descriptionKey: 'projects_locale.items.vue_chatbot.description',
+    tags: ['Vue.js', 'FastAPI', 'PostgreSQL'],
+    projectLink: "https://github.com/carlos-dani-dev/vue-chatbot-template",
+    videoElement: null
+  },
+  {
+    key: 'tanamesa_pipeline',
+    titleKey: 'projects_locale.items.tanamesa_pipeline.title',
+    descriptionKey: 'projects_locale.items.tanamesa_pipeline.description',
+    tags: ['SQL', 'PostgreSQL', 'FastAPI'],
+    projectLink: "https://github.com/carlos-dani-dev/tanamesa-data-pipeline",
+    videoElement: null
+  },
+  {
+    key: 'portfolio',
+    titleKey: 'projects_locale.items.portfolio.title',
+    descriptionKey: 'projects_locale.items.portfolio.description',
+    tags: ['Vue', 'Tailwind', 'Javascript'],
+    projectLink: "https://github.com/carlos-dani-dev/portfolio",
+    videoElement: null
+  }
+]
+
+const experiences = [
+  {
+    key: 'exp_1',
+    roleKey: 'resume.exp_1_role',
+    companyKey: 'resume.exp_1_company',
+    periodKey: 'resume.exp_1_period',
+    bulletKeys: [
+      'resume.exp_1_bullet_1',
+      'resume.exp_1_bullet_2',
+      'resume.exp_1_bullet_3'
+    ]
+  },
+  {
+    key: 'exp_2',
+    roleKey: 'resume.exp_2_role',
+    companyKey: 'resume.exp_2_company',
+    periodKey: 'resume.exp_2_period',
+    bulletKeys: [
+      'resume.exp_2_bullet_1',
+      'resume.exp_2_bullet_2',
+      'resume.exp_2_bullet_3',
+      'resume.exp_2_bullet_4'
+    ]
+  },
+  {
+    key: 'exp_3',
+    roleKey: 'resume.exp_3_role',
+    companyKey: 'resume.exp_3_company',
+    periodKey: 'resume.exp_3_period',
+    bulletKeys: [
+      'resume.exp_3_bullet_1',
+      'resume.exp_3_bullet_2',
+      'resume.exp_3_bullet_3',
+      'resume.exp_3_bullet_4'
+    ]
+  }
+]
 
 </script>
 
@@ -87,56 +154,41 @@ langStore.initLang()
     <section class="resume__section">
       <h2 class="resume__title">{{ t('resume.experience_title') }}</h2>
 
-      <article class="resume__entry">
+      <article
+        v-for="exp in experiences" :key="exp.key"
+        class="resume__entry">
         <div class="resume__entry-head">
           <div>
-            <h3 class="resume__entry-role">{{ t('resume.exp_1_role') }}</h3>
-            <p class="resume__entry-company">{{ t('resume.exp_1_company') }}</p>
+            <h3 class="resume__entry-role">{{ t(exp.roleKey) }}</h3>
+            <p class="resume__entry-company">{{ t(exp.companyKey) }}</p>
           </div>
-          <span class="resume__entry-period">{{ t('resume.exp_1_period') }}</span>
+          <span class="resume__entry-period">{{ t(exp.periodKey) }}</span>
         </div>
         <ul class="resume__bullets">
-          <li>{{ t('resume.exp_1_bullet_1') }}</li>
-          <li>{{ t('resume.exp_1_bullet_2') }}</li>
-          <li>{{ t('resume.exp_1_bullet_3') }}</li>
-        </ul>
-      </article>
-
-      <article class="resume__entry">
-        <div class="resume__entry-head">
-          <div>
-            <h3 class="resume__entry-role">{{ t('resume.exp_2_role') }}</h3>
-            <p class="resume__entry-company">{{ t('resume.exp_2_company') }}</p>
-          </div>
-          <span class="resume__entry-period">{{ t('resume.exp_2_period') }}</span>
-        </div>
-        <ul class="resume__bullets">
-          <li>{{ t('resume.exp_2_bullet_1') }}</li>
-          <li>{{ t('resume.exp_2_bullet_2') }}</li>
-          <li>{{ t('resume.exp_2_bullet_3') }}</li>
-          <li>{{ t('resume.exp_2_bullet_4') }}</li>
-        </ul>
-      </article>
-
-      <article class="resume__entry">
-        <div class="resume__entry-head">
-          <div>
-            <h3 class="resume__entry-role">{{ t('resume.exp_3_role') }}</h3>
-            <p class="resume__entry-company">{{ t('resume.exp_3_company') }}</p>
-          </div>
-          <span class="resume__entry-period">{{ t('resume.exp_3_period') }}</span>
-        </div>
-        <ul class="resume__bullets">
-          <li>{{ t('resume.exp_3_bullet_1') }}</li>
-          <li>{{ t('resume.exp_3_bullet_2') }}</li>
-          <li>{{ t('resume.exp_3_bullet_3') }}</li>
-          <li>{{ t('resume.exp_3_bullet_4') }}</li>
+          <li v-for="bulletKey in exp.bulletKeys" :key="bulletKey">{{ t(bulletKey) }}</li>
         </ul>
       </article>
     </section>
 
-    
-    <!-- educação -->
+    <!-- projetos -->
+    <section class="resume__section">
+      <h2 class="resume__title">{{ t('projects_locale.title') }}</h2>
+
+      <a
+        v-for="project in projects" :key="project.key"
+        class="resume__entry resume__entry--link"
+        :href="project.projectLink"
+        target="_blank"
+        rel="noopener">
+        <div class="resume__entry-head">
+          <h3 class="resume__entry-role"><MarkdownText :content="t(project.titleKey)" /></h3>
+        </div>
+        <ul class="resume__bullets">
+          <li><MarkdownText :content="t(project.descriptionKey)" /></li>
+        </ul>
+      </a>
+    </section>
+
     <section class="resume__section">
       <h2 class="resume__title">{{ t('resume.education_title') }}</h2>
       <div class="resume__entry-head">
@@ -361,6 +413,24 @@ select option {
 
 .resume__entry { margin-bottom: 1.4rem; }
 .resume__entry:last-child { margin-bottom: 0; }
+
+.resume__entry--link {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.resume__entry--link:hover,
+.resume__entry--link:focus-visible {
+  color: var(--resume-accent-color);
+}
+
+.resume__entry--link:hover .resume__entry-role,
+.resume__entry--link:focus-visible .resume__entry-role {
+  color: var(--resume-accent-color);
+}
 
 .resume__entry-head {
   display: flex;
