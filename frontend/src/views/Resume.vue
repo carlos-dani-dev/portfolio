@@ -3,6 +3,8 @@ import MarkdownText from '@/components/MarkdownText.vue'
 
 import { useI18n } from 'vue-i18n';
 
+
+
 import { useLangStore } from '@/stores/langStore';
 import { useThemeStore } from '@/stores/themeStore';
 
@@ -12,6 +14,18 @@ const themeStore = useThemeStore()
 
 themeStore.initTheme()
 langStore.initLang()
+
+function download_resume() {
+  // Use the browser's native print dialog — it resolves all CSS variables
+  // and themed styles perfectly, unlike html2canvas which cannot.
+  const topbar = document.querySelector('.topbar')
+  if (topbar) topbar.style.display = 'none'
+
+  window.print()
+
+  // Restore topbar after print dialog closes
+  if (topbar) topbar.style.display = ''
+}
 
 const projects = [
   {
@@ -117,7 +131,7 @@ const experiences = [
         </label>
       </div>
 
-      <a class="download-a" href="/curriculo-carlos-portela.pdf" download>
+      <a class="download-a" v-on:click="download_resume()" download>
         <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M12 3v10.586l3.293-3.293 1.414 1.414L12 17.414l-4.707-4.707 1.414-1.414L12 13.586V3h0zM5 19h14v2H5v-2z"/></svg>
         {{ t('resume.download_btn') }}
       </a>
@@ -141,6 +155,10 @@ const experiences = [
         <a class="resume__contact-item" href="https://github.com/carlos-dani-dev" target="_blank" rel="noopener">
           <svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor"><path d="M12 2a10 10 0 00-3.16 19.49c.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.46-1.16-1.11-1.47-1.11-1.47-.9-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.9 1.52 2.34 1.08 2.91.83.09-.65.35-1.08.63-1.33-2.22-.25-4.56-1.11-4.56-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.02a9.4 9.4 0 015 0c1.9-1.3 2.75-1.02 2.75-1.02.55 1.38.2 2.4.1 2.65.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.68-4.57 4.93.36.31.68.92.68 1.85v2.75c0 .26.18.58.69.48A10 10 0 0012 2z"/></svg>
           @carlos-dani-dev
+        </a>
+        <a class="resume__contact-item" href="https://carlos-dani-dev.github.io/portfolio/home" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+          Web Portfolio
         </a>
       </div>
     </header>
@@ -484,4 +502,70 @@ select option {
   .topbar { padding: 0.75rem 1rem; }
   .topbar__controls { gap: 0.7rem; }
 }
+
+@media print {
+  /* Force the browser to print background colors and images */
+  * {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+    color-adjust: exact !important;
+  }
+
+  /* No page margins — we control spacing via the resume padding
+     so the background color fills edge-to-edge on every page */
+  @page {
+    margin: 0;
+    size: A4;
+  }
+
+  /* Hide the topbar */
+  .topbar {
+    display: none !important;
+  }
+
+  /* Remove page padding for web layout */
+  .resume-page {
+    padding: 0 !important;
+    min-height: 0 !important;
+    background-color: var(--color-bg) !important;
+  }
+
+  /* Remove card styling, make resume fill the page edge-to-edge */
+  .resume {
+    border: none !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    max-width: 100% !important;
+    width: 100% !important;
+    margin: 0 !important;
+    /* Generous padding acts as the "page margin" so background fills edge-to-edge */
+    padding: 0.6in 0.55in !important;
+    background-color: var(--color-bg) !important;
+  }
+
+  /* Set body/html background to match theme */
+  html, body {
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    background-color: var(--color-bg) !important;
+    color: var(--color-text) !important;
+  }
+
+  /* DO NOT avoid breaks on .resume__section — sections can be large
+     and would leave huge blank gaps. Only avoid on individual entries. */
+  .resume__entry {
+    break-inside: avoid;
+  }
+
+  .resume__header {
+    break-inside: avoid;
+  }
+
+  /* Keep section titles with their content — never orphan a title at page bottom */
+  .resume__title {
+    break-after: avoid;
+  }
+}
+
 </style>

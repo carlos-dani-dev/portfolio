@@ -12,8 +12,17 @@ import RightArrow from '@/assets/icons/right-arrow.svg'
 import LeftArrow from '@/assets/icons/left-arrow.svg'
 
 import { useI18n } from 'vue-i18n';
+import { ref } from 'vue';
 
 const { t } = useI18n()
+const carouselRef = ref(null)
+
+function scrollCarousel(direction) {
+  const carousel = carouselRef.value
+  if (!carousel) return
+  const cardWidth = carousel.querySelector('.carousel-item')?.offsetWidth || 0
+  carousel.scrollBy({ left: direction * cardWidth, behavior: 'smooth' })
+}
 
 const projects = [
   {
@@ -74,7 +83,11 @@ function stopPreview(project) {
     </div>
 
     <div class="carousel-wrapper">
-      <ul class="carousel">
+      <button class="carousel-btn carousel-btn--left" @click="scrollCarousel(-1)" aria-label="Previous project">
+        <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
+      </button>
+
+      <ul ref="carouselRef" class="carousel">
         <li
           v-for="project in projects" :key="project.key"
           class="project-card carousel-item overflow-hidden border flex flex-col max-w-[1000px] mx-auto w-full rounded-2xl transition-all duration-300 hover:-translate-y-1 cursor-pointer">
@@ -129,6 +142,10 @@ function stopPreview(project) {
           </div>
         </li>
       </ul>
+
+      <button class="carousel-btn carousel-btn--right" @click="scrollCarousel(1)" aria-label="Next project">
+        <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+      </button>
     </div>
 
   </section>
@@ -204,6 +221,37 @@ function stopPreview(project) {
 
 .project-btn:hover svg {
   transform: translate(2px, -2px);
+}
+
+.carousel-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.carousel-btn {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid var(--project-card-border-color);
+  background: var(--project-card-bg-color);
+  color: var(--title-text-color);
+  cursor: pointer;
+  transition: all 0.25s ease;
+  opacity: 0.7;
+}
+
+.carousel-btn:hover {
+  opacity: 1;
+  border-color: var(--title-text-color);
+  background: var(--title-text-color);
+  color: var(--color-bg);
+  transform: scale(1.08);
 }
 
 .carousel {
