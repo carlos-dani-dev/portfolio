@@ -73,9 +73,9 @@ export default {
         name: "Carlos Daniel Portela",
         role: "Software Developer & AI Researcher",
         summary_title: "SUMMARY",
-        summary_text: "I am finishing my degree in **Computer Science** at **UFPI**. I also work as a **Researcher** in the **DeepFakes** area using **Dense Neural Networks (DNNs)**. Additionally, I worked as a **Junior Developer** at **IGDS** during the operationalization of the **Tá Na Mesa** program in the state of Paraíba. I have experience with cloud machine management on **AWS EC2** and **S3**, strong **Linux** proficiency, and **SQL** with **PostgreSQL**, **JavaScript**, and Python frameworks: **React**, **Vue.js**, and advanced **FastAPI**, **SQLAlchemy**, **LangChain**, **TensorFlow**, **Pandas**, **Selenium**, **Jinja**.",
+        summary_text: "I am finishing my degree in **Computer Science** at **UFPI**. I also work as a **Researcher** in the **DeepFakes** area using **Dense Neural Networks (DNNs)**. Additionally, I worked as a **Jr Data Engineer** at **IGDS** during the operationalization of the **Tá Na Mesa** program in the state of Paraíba. I have experience with cloud machine management on **AWS EC2** and **S3**, strong **Linux** proficiency, and **SQL** with **PostgreSQL**, **JavaScript**, and Python frameworks: **React**, **Vue.js**, and advanced **FastAPI**, **SQLAlchemy**, **LangChain**, **TensorFlow**, **Pandas**, **Selenium**, **Jinja**.",
         experience_title: "PROFESSIONAL EXPERIENCE",
-        exp_1_role: "Junior Developer",
+        exp_1_role: "Jr Data Engineer",
         exp_1_company: "IGDS, consulting",
         exp_1_period: "Feb 2026 — Present",
         exp_1_bullet_1: "Collecting beneficiary information through a **digital form**",
@@ -110,16 +110,16 @@ export default {
         contact_github: "@carlos-dani-dev",
 
         summary_title: "Summary",
-        summary_text: "I'm finishing my degree in **Computer Science** at UFPI. I'm also a **Researcher** in **DeepFakes** using **Dense Neural Networks (DNNs)**. I've also worked as a **Junior Developer** at **IGDS**, during the rollout of the **Tá Na Mesa Program**, in the state of Paraíba. I have skills in cloud machine management with **AWS EC2** and **S3**, **Linux** proficiency, plus **SQL** with **PostgreSQL**, **JavaScript**, and Python frameworks: **React**, **Vue.js**, and advanced **FastAPI**, **SQLAlchemy**, **Langchain**, **Tensorflow**, **Pandas**, **Selenium**, **Jinja**.",
+        summary_text: "I'm finishing my degree in **Computer Science** at UFPI. I'm also a **Researcher** in **DeepFakes** using **Dense Neural Networks (DNNs)**. I've also worked as a **Jr Data Engineer** at **IGDS**, during the rollout of the **Tá Na Mesa Program**, in the state of Paraíba. I have skills in cloud machine management with **AWS EC2** and **S3**, **Linux** proficiency, plus **SQL** with **PostgreSQL**, **JavaScript**, and Python frameworks: **React**, **Vue.js**, and advanced **FastAPI**, **SQLAlchemy**, **Langchain**, **Tensorflow**, **Pandas**, **Selenium**, **Jinja**.",
 
         experience_title: "Professional Experience",
 
-        exp_1_role: "Junior Developer",
+        exp_1_role: "Jr Data Engineer",
         exp_1_company: "IGDS, consulting",
         exp_1_period: "Feb 2026 — Present",
         exp_1_bullet_1: "Captured beneficiary information for the program through a digital form",
-        exp_1_bullet_2: "Processed raw data and built key performance indicators (KPIs)",
-        exp_1_bullet_3: "Served transformed data with Python through a FastAPI API for consumption and insight delivery via Metabase",
+        exp_1_bullet_2: "Processed raw data and built key performance indicators (KPIs) with SQL views",
+        exp_1_bullet_3: "Served PostgreSQL persisted data, manipulated with SQL and Python, through a FastAPI API for consumption and insight delivery via Metabase",
 
         exp_2_role: "Researcher — DeepFake Detection",
         exp_2_company: "LabVip, UFPI",

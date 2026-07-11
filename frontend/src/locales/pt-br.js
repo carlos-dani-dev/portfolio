@@ -77,16 +77,16 @@ export default {
         contact_github: "carlos-dani-dev",
 
         summary_title: "Resumo",
-        summary_text: "Estou me formando em **Ciências da Computação** na UFPI. Sou também **Pesquisador** na área de **DeepFakes** usando **Redes Neurais Densas (DNNs)**. Além disso, atuei como **Desenvolvedor júnior** no **IGDS**, durante a operacionalização do programa **Tá Na Mesa**, no estado da Paraíba. Possuo habilidades em gerenciamento de máquinas na nuvem com **AWS EC2** e **S3**, proficiência **Linux**, além de **SQL** com **PostgreSQL**, **JavaScript** e frameworks Python: **React**, **Vue.js** e **FastAPI** avançado, **SQLAlchemy**, **Langchain**, **Tensorflow**, **Pandas**, **Selenium**, **Jinja**.",
+        summary_text: "Estou me formando em **Ciências da Computação** na UFPI. Sou também **Pesquisador** na área de **DeepFakes** usando **Redes Neurais Densas (DNNs)**. Além disso, atuei como **Engenheiro de Dados Jr** no **IGDS**, durante a operacionalização do programa **Tá Na Mesa**, no estado da Paraíba. Possuo habilidades em gerenciamento de máquinas na nuvem com **AWS EC2** e **S3**, proficiência **Linux**, além de **SQL** com **PostgreSQL**, **JavaScript** e frameworks Python: **React**, **Vue.js** e **FastAPI** avançado, **SQLAlchemy**, **Langchain**, **Tensorflow**, **Pandas**, **Selenium**, **Jinja**.",
 
         experience_title: "Experiência Profissional",
 
-        exp_1_role: "Desenvolvedor júnior",
+        exp_1_role: "Engenheiro de Dados Jr",
         exp_1_company: "IGDS, consultoria",
         exp_1_period: "Fev 2026 — Atual",
         exp_1_bullet_1: "Captura de informações dos beneficiários do programa por formulário digital",
-        exp_1_bullet_2: "Tratamento de dados brutos e composição de indicadores-chave (KPI's)",
-        exp_1_bullet_3: "Disposição de dados transformados com Python por meio de API FastAPI para consumo e provisionamento de insights com Metabase",
+        exp_1_bullet_2: "Tratamento de dados brutos e composição de indicadores-chave (KPI's) a partir de views SQL",
+        exp_1_bullet_3: "Disposição de dados persistidos em PostgreSQL, e transformados com Python e SQL, por meio de API FastAPI para consumo e provisionamento de insights com Metabase",
 
         exp_2_role: "Pesquisador — Detecção de DeepFake",
         exp_2_company: "LabVip, UFPI",
