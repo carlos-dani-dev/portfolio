@@ -7,6 +7,8 @@ import thumbTanamesaPipeline from '@/assets/images/thumb-tanamesa-pipe.png'
 import previewTanamesaPipeline from '@/assets/videos/preview-tanamesa-pipe.mp4'
 import thumbPortfolio from '@/assets/images/thumb-portfolio.png'
 import previewPortfolio from '@/assets/videos/preview-portfolio.mp4'
+import thumbInferenceApi from '@/assets/images/thumb-inference-api.png'
+import previewInferenceApi from '@/assets/videos/preview-inference-api.mp4'
 
 import RightArrow from '@/assets/icons/right-arrow.svg'
 import LeftArrow from '@/assets/icons/left-arrow.svg'
@@ -25,6 +27,16 @@ function scrollCarousel(direction) {
 }
 
 const projects = [
+  {
+    key: 'inference_api',
+    titleKey: 'projects_locale.items.inference_api.title',
+    descriptionKey: 'projects_locale.items.inference_api.description',
+    thumb: thumbInferenceApi,
+    video: previewInferenceApi,
+    tags: ['Ollama', 'FastAPI', 'Vue.js'],
+    projectLink: "https://github.com/carlos-dani-dev/vue-chatbot-template",
+    videoElement: null
+  },  
   {
     key: 'vue_chatbot',
     titleKey: 'projects_locale.items.vue_chatbot.title',

@@ -32,18 +32,21 @@ export default {
         section_description: "Aqui apresento minhas principais contribuições **profissionais** e **acadêmicas**.",
         project_btn_label: "Ver projeto",
         items: {
+            inference_api: {
+                title: "**API de Inferência OpenAI-Like**",
+                description: "A implementação completa de uma **API de Inferência** que segue o contrato **OpenAI-Like**. O frontend consome a API, aproveitando as features do contrato.",
+            },
             vue_chatbot: {
-            title: "Template de **Chatbot Vue.js**",
-            description: "Um template baseado em **Vue.js** de um chatbot cujo backend implementa o **protocolo de comunicação** entre assistentes de **IA Generativa OpenAI-Like**.",
-            tags: ["Vue.js", "FastAPI", "PostgreSQL"]
+                title: "Template de **Chatbot Vue.js**",
+                description: "Um template baseado em **Vue.js** de um chatbot cujo backend implementa o **protocolo de comunicação** entre assistentes de **IA Generativa OpenAI-Like**.",
             },
             tanamesa_pipeline: {
-            title: "Tá Na Mesa **Data Pipeline**",
-            description: "Um **pipeline de dados** completo para o **monitoramento** da operacionalização da política pública de vulnerabilidade alimentar que atende a **todo o estado da Paraíba**"
+                title: "Tá Na Mesa **Data Pipeline**",
+                description: "Um **pipeline de dados** completo para o **monitoramento** da operacionalização da política pública de vulnerabilidade alimentar que atende a **todo o estado da Paraíba**"
             },
             portfolio: {
-            title: "Portfólio profissional",
-            description: "Meu portfólio profissional **totalmente responsivo** desenvolvido com **Vue** e **Tailwind** e armazenamento em cache com **Pinia** para controle de linguagem e tema."
+                title: "Portfólio profissional",
+                description: "Meu portfólio profissional **totalmente responsivo** desenvolvido com **Vue** e **Tailwind** e armazenamento em cache com **Pinia** para controle de linguagem e tema."
             }
         }
     },

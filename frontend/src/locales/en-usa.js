@@ -32,14 +32,17 @@ export default {
         section_description: "Here I present my main **professional** and **academic** contributions.",
         project_btn_label: "View project",
         items: {
+            inference_api: {
+                title: "**OpenAI-Like Inference API**",
+                description: "The complete implementation of an **Inference API** that follows the **OpenAI-Like** contract. The frontend consumes the API, leveraging the contract's features.",
+            },
             vue_chatbot: {
-            title: "**Vue.js Chatbot** Template",
-            description: "A **Vue.js**-based chatbot template whose backend implements the **communication protocol** for **OpenAI-like Generative AI** assistants.",
-            tags: ["Vue.js", "FastAPI", "PostgreSQL"]
+                title: "**Vue.js Chatbot** Template",
+                description: "A **Vue.js**-based chatbot template whose backend implements the **communication protocol** for **OpenAI-like Generative AI** assistants.",
             },
             tanamesa_pipeline: {
-            title: "Ta Na Mesa **Data Pipeline**",
-            description: "A comprehensive **data pipeline** for **monitoring** the implementation of the public policy on food insecurity that covers the **entire state of Paraíba**"
+                title: "Ta Na Mesa **Data Pipeline**",
+                description: "A comprehensive **data pipeline** for **monitoring** the implementation of the public policy on food insecurity that covers the **entire state of Paraíba**"
             },
             portfolio: {
                 title: "Professional resume",
