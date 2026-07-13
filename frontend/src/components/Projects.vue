@@ -34,7 +34,7 @@ const projects = [
     thumb: thumbInferenceApi,
     video: previewInferenceApi,
     tags: ['Ollama', 'FastAPI', 'Vue.js'],
-    projectLink: "https://github.com/carlos-dani-dev/vue-chatbot-template",
+    projectLink: "https://github.com/carlos-dani-dev/inference-api",
     videoElement: null
   },  
   {

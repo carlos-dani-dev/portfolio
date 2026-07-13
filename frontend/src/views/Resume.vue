@@ -3,8 +3,6 @@ import MarkdownText from '@/components/MarkdownText.vue'
 
 import { useI18n } from 'vue-i18n';
 
-
-
 import { useLangStore } from '@/stores/langStore';
 import { useThemeStore } from '@/stores/themeStore';
 
@@ -16,18 +14,23 @@ themeStore.initTheme()
 langStore.initLang()
 
 function download_resume() {
-  // Use the browser's native print dialog — it resolves all CSS variables
-  // and themed styles perfectly, unlike html2canvas which cannot.
   const topbar = document.querySelector('.topbar')
   if (topbar) topbar.style.display = 'none'
 
   window.print()
 
-  // Restore topbar after print dialog closes
   if (topbar) topbar.style.display = ''
 }
 
 const projects = [
+  {
+    key: 'inference_api',
+    titleKey: 'projects_locale.items.inference_api.title',
+    descriptionKey: 'projects_locale.items.inference_api.description',
+    tags: ['Ollama', 'FastAPI', 'Vue.js'],
+    projectLink: "https://github.com/carlos-dani-dev/inference-api",
+    videoElement: null
+  },
   {
     key: 'vue_chatbot',
     titleKey: 'projects_locale.items.vue_chatbot.title',
@@ -188,7 +191,6 @@ const experiences = [
       </article>
     </section>
 
-    <!-- projetos -->
     <section class="resume__section">
       <h2 class="resume__title">{{ t('projects_locale.title') }}</h2>
 
@@ -218,7 +220,6 @@ const experiences = [
       </div>
     </section>
 
-    <!-- idiomas -->
     <section class="resume__section">
       <h2 class="resume__title">{{ t('resume.languages_title') }}</h2>
       <ul class="resume__bullets">
@@ -238,7 +239,6 @@ const experiences = [
   padding: 5.5rem 1.25rem 4rem;
 }
 
-/* ---------- top bar ---------- */
 .topbar {
   position: fixed;
   top: 0;
@@ -504,33 +504,27 @@ select option {
 }
 
 @media print {
-  /* Force the browser to print background colors and images */
   * {
     -webkit-print-color-adjust: exact !important;
     print-color-adjust: exact !important;
     color-adjust: exact !important;
   }
 
-  /* No page margins — we control spacing via the resume padding
-     so the background color fills edge-to-edge on every page */
   @page {
     margin: 0;
     size: A4;
   }
 
-  /* Hide the topbar */
   .topbar {
     display: none !important;
   }
 
-  /* Remove page padding for web layout */
   .resume-page {
     padding: 0 !important;
     min-height: 0 !important;
     background-color: var(--color-bg) !important;
   }
 
-  /* Remove card styling, make resume fill the page edge-to-edge */
   .resume {
     border: none !important;
     border-radius: 0 !important;
@@ -538,12 +532,10 @@ select option {
     max-width: 100% !important;
     width: 100% !important;
     margin: 0 !important;
-    /* Generous padding acts as the "page margin" so background fills edge-to-edge */
     padding: 0.6in 0.55in !important;
     background-color: var(--color-bg) !important;
   }
 
-  /* Set body/html background to match theme */
   html, body {
     width: 100% !important;
     margin: 0 !important;
@@ -552,8 +544,6 @@ select option {
     color: var(--color-text) !important;
   }
 
-  /* DO NOT avoid breaks on .resume__section — sections can be large
-     and would leave huge blank gaps. Only avoid on individual entries. */
   .resume__entry {
     break-inside: avoid;
   }
@@ -562,7 +552,6 @@ select option {
     break-inside: avoid;
   }
 
-  /* Keep section titles with their content — never orphan a title at page bottom */
   .resume__title {
     break-after: avoid;
   }
