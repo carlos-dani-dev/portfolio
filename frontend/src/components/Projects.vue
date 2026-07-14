@@ -82,6 +82,15 @@ function stopPreview(project) {
     project.videoElement.currentTime = 0;
   }
 }
+
+const activeProject = ref(null)
+
+function openModal(project) {
+  activeProject.value = project
+}
+function closeModal() {
+  activeProject.value = null
+}
 </script>
 
 <template>
@@ -127,18 +136,30 @@ function stopPreview(project) {
             <div class="flex justify-between items-center">
               <p class="colored-text text-3xl font-semibold"><MarkdownText :content="t(project.titleKey)" /></p>
               
-              <a 
-                :href="project.projectLink" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                class="project-btn inline-flex items-center gap-2 px-5 py-2 font-semibold transition-all duration-300"
-              >
-                {{t('projects_locale.project_btn_label')}}
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <line x1="7" y1="17" x2="17" y2="7"></line>
-                  <polyline points="7 7 17 7 17 17"></polyline>
-                </svg>
-              </a>
+              <div class="flex flex-row justify-center items-center gap-3">
+                <a href="#"
+                  @click.prevent="openModal(project)"
+                  class="project-btn inline-flex items-center gap-2 px-5 py-2 font-semibold transition-all duration-300"
+                >
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                    <polygon points="6 3 20 12 6 21 6 3"></polygon>
+                  </svg>
+                  {{ t('projects_locale.full_preview_btn') }}
+                </a>
+
+                <a 
+                  :href="project.projectLink" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  class="project-btn inline-flex items-center gap-2 px-5 py-2 font-semibold transition-all duration-300"
+                >
+                  {{t('projects_locale.project_btn_label')}}
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="7" y1="17" x2="17" y2="7"></line>
+                    <polyline points="7 7 17 7 17 17"></polyline>
+                  </svg>
+                </a>
+              </div>
             </div>
             
             <div class="flex flex-wrap gap-3">
@@ -154,6 +175,13 @@ function stopPreview(project) {
           </div>
         </li>
       </ul>
+      
+      <div v-if="activeProject" class="modal-overlay" @click.self="closeModal">
+        <div class="modal-content">
+          <button class="modal-close" @click="closeModal" aria-label="Fechar">✕</button>
+          <video :src="activeProject.video" controls autoplay class="modal-video"></video>
+        </div>
+      </div>
 
       <button class="carousel-btn carousel-btn--right" @click="scrollCarousel(1)" aria-label="Next project">
         <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
@@ -292,5 +320,38 @@ function stopPreview(project) {
   border-radius: 8px;
   
   scroll-snap-align: center;
+}
+
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  position: relative;
+  width: 90%;
+  max-width: 900px;
+}
+
+.modal-video {
+  width: 100%;
+  border-radius: 8px;
+  display: block;
+}
+
+.modal-close {
+  position: absolute;
+  top: -40px;
+  right: 0;
+  background: transparent;
+  border: none;
+  color: #fff;
+  font-size: 1.5rem;
+  cursor: pointer;
 }
 </style>

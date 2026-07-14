@@ -30,6 +30,7 @@ export default {
     projects_locale: {
         title: "Most relevant projects",
         section_description: "Here I present my main **professional** and **academic** contributions.",
+        full_preview_btn: "Full preview",
         project_btn_label: "View project",
         items: {
             inference_api: {

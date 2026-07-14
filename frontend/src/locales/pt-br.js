@@ -30,6 +30,7 @@ export default {
     projects_locale: {
         title: "Projetos mais relevantes",
         section_description: "Aqui apresento minhas principais contribuições **profissionais** e **acadêmicas**.",
+        full_preview_btn: "Preview completo",
         project_btn_label: "Ver projeto",
         items: {
             inference_api: {
