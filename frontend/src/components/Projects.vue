@@ -36,7 +36,7 @@ const projects = [
     thumb: thumbCashbackMultiagent,
     video: previewCashbackMultiagent,
     tags: ['Claude', 'Python', 'Pandas'],
-    projectLink: "https://github.com/carlos-dani-dev/meliuz-ab-test-analyzer",
+    projectLink: "",
     videoElement: null
   },
   {
