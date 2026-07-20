@@ -9,6 +9,8 @@ import thumbPortfolio from '@/assets/images/thumb-portfolio.png'
 import previewPortfolio from '@/assets/videos/preview-portfolio.mp4'
 import thumbInferenceApi from '@/assets/images/thumb-inference-api.png'
 import previewInferenceApi from '@/assets/videos/preview-inference-api.mp4'
+import thumbCashbackMultiagent from '@/assets/images/thumb-cashback-multiagent-analysis.png'
+import previewCashbackMultiagent from '@/assets/videos/preview-cashback-multiagent-analysis.mp4'
 
 import RightArrow from '@/assets/icons/right-arrow.svg'
 import LeftArrow from '@/assets/icons/left-arrow.svg'
@@ -27,6 +29,16 @@ function scrollCarousel(direction) {
 }
 
 const projects = [
+  {
+    key: 'cashback_multiagent',
+    titleKey: 'projects_locale.items.cashback_multiagent.title',
+    descriptionKey: 'projects_locale.items.cashback_multiagent.description',
+    thumb: thumbCashbackMultiagent,
+    video: previewCashbackMultiagent,
+    tags: ['Python', 'Pandas', 'Claude'],
+    projectLink: "",
+    videoElement: null
+  },
   {
     key: 'inference_api',
     titleKey: 'projects_locale.items.inference_api.title',

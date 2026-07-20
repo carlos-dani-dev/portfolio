@@ -24,6 +24,14 @@ function download_resume() {
 
 const projects = [
   {
+    key: 'cashback_multiagent',
+    titleKey: 'projects_locale.items.cashback_multiagent.title',
+    descriptionKey: 'projects_locale.items.cashback_multiagent.description',
+    tags: ['Python', 'Pandas', 'Claude'],
+    projectLink: "",
+    videoElement: null
+  },
+  {
     key: 'inference_api',
     titleKey: 'projects_locale.items.inference_api.title',
     descriptionKey: 'projects_locale.items.inference_api.description',

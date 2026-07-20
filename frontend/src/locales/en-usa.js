@@ -33,6 +33,10 @@ export default {
         full_preview_btn: "Full preview",
         project_btn_label: "View project",
         items: {
+            cashback_multiagent: {
+                title: "**Multi-agent** Cashback Analysis",
+                description: "A **multi-agent** system that automates the **data analysis** of cashback programs, orchestrating **AI** agents with **Claude** to generate insights from data processed with **Python** and **Pandas**.",
+            },
             inference_api: {
                 title: "**OpenAI-Like Inference API**",
                 description: "The complete implementation of an **Inference API** that follows the **OpenAI-Like** contract. The frontend consumes the API, leveraging the contract's features.",
