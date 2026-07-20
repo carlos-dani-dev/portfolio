@@ -326,10 +326,10 @@ function closeModal() {
   flex: 0 0 100%;
   min-height: 250px;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  align-items: stretch;
+  justify-content: flex-start;
   border-radius: 8px;
-  
+
   scroll-snap-align: center;
 }
 
