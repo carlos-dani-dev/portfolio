@@ -19,7 +19,7 @@ const stacks = [
 
 <template>
 
-<section id="stacks-section" class="py-12 max-w-6xl mx-auto px-4 md:px-8">
+<section id="stacks-section" class="min-h-dvh snap-start flex flex-col justify-center py-12 max-w-6xl mx-auto px-4 md:px-8">
     <div class="text-center mb-16">
         <h2 class="colored-text text-4xl md:text-5xl font-bold mb-4 tracking-tight">{{t('stacks.title')}}</h2>
         <p class="max-w-2xl mx-auto text-lg opacity-80 max-w-1xl">

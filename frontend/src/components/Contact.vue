@@ -29,7 +29,7 @@ function send_email() {
 </script>
 
 <template>
-<section id="contact-section" class="py-24 max-w-[800px] mx-auto px-8">
+<section id="contact-section" class="min-h-dvh snap-start flex flex-col justify-center py-24 max-w-[800px] mx-auto px-8">
   <div class="flex flex-col items-center text-center mb-16">
     <h2 class="colored-text text-4xl md:text-5xl font-bold tracking-tight mb-4">{{t('contact.title')}}</h2>
     <p class="text-lg opacity-80 max-w-1xl">

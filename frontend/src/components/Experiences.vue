@@ -25,7 +25,7 @@ const experiences = [
 </script>
 
 <template>
-  <section id="experiences-section" class="py-12 max-w-[1000px] mx-auto px-8">
+  <section id="experiences-section" class="min-h-dvh snap-start flex flex-col justify-center py-12 max-w-[1000px] mx-auto px-8">
 
     <div class="flex flex-col items-center mb-16">
       <h2 class="colored-text text-4xl md:text-5xl font-bold tracking-tight mb-4">{{ t('experiences.title') }}</h2>

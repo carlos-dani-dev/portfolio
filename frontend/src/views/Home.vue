@@ -25,7 +25,7 @@ onMounted(() => {
 
 <template>
 <Header></Header>
-<main class="pt-24">
+<main class="pt-24 h-dvh overflow-y-auto snap-y snap-proximity scroll-pt-24 scroll-smooth">
     <Me></Me>
     <AboutMe></AboutMe>
     <Stacks></Stacks>

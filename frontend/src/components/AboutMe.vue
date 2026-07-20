@@ -10,7 +10,7 @@
 
 <template>
 
-<section id="aboutMe-section" class="flex flex-col items-center py-12 px-6">
+<section id="aboutMe-section" class="min-h-dvh snap-start flex flex-col items-center justify-center py-12 px-6">
     <div class="flex flex-col items-center py-10">
         <h2 class="colored-text lg:text-5xl font-bold tracking-tight mb-4">{{ t('aboutMe.title') }}</h2>
         <p class="text-lg opacity-80 max-w-1xl"><MarkdownText :content="t('aboutMe.section_description')" /></p>

@@ -35,7 +35,7 @@ export default {
         items: {
             cashback_multiagent: {
                 title: "**Multi-agent** Cashback Analysis",
-                description: "A **multi-agent** system that automates the **data analysis** of cashback programs, orchestrating **AI** agents with **Claude** to generate insights from data processed with **Python** and **Pandas**.",
+                description: "A **multi-agent** system that automates the **data analysis** of cashback programs A/B tests, orchestrating **AI** agents with **Claude** to generate insights from data processed with **Python** and **Pandas**.",
             },
             inference_api: {
                 title: "**OpenAI-Like Inference API**",

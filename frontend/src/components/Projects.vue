@@ -35,8 +35,8 @@ const projects = [
     descriptionKey: 'projects_locale.items.cashback_multiagent.description',
     thumb: thumbCashbackMultiagent,
     video: previewCashbackMultiagent,
-    tags: ['Python', 'Pandas', 'Claude'],
-    projectLink: "",
+    tags: ['Claude', 'Python', 'Pandas'],
+    projectLink: "https://github.com/carlos-dani-dev/meliuz-ab-test-analyzer",
     videoElement: null
   },
   {
@@ -106,7 +106,7 @@ function closeModal() {
 </script>
 
 <template>
-  <section id="projects-section" class="py-12 max-w-10xl mx-auto px-4 md:px-8">
+  <section id="projects-section" class="min-h-dvh snap-start flex flex-col justify-center py-12 max-w-10xl mx-auto px-4 md:px-8">
     
     <div class="text-center mb-16">
       <h2 class="colored-text text-4xl md:text-5xl font-bold tracking-tight mb-4">{{ t('projects_locale.title') }}</h2>
@@ -143,15 +143,15 @@ function closeModal() {
             ></video>
           </div>
 
-          <div class="flex flex-col gap-4 p-3">
-            
-            <div class="flex justify-between items-center">
-              <p class="colored-text text-3xl font-semibold"><MarkdownText :content="t(project.titleKey)" /></p>
-              
-              <div class="flex flex-row justify-center items-center gap-3">
+          <div class="flex flex-col gap-4 p-3 sm:p-4">
+
+            <div class="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-3">
+              <p class="colored-text text-xl sm:text-2xl md:text-3xl font-semibold break-words"><MarkdownText :content="t(project.titleKey)" /></p>
+
+              <div class="flex flex-row flex-wrap items-center gap-2 sm:gap-3">
                 <a href="#"
                   @click.prevent="openModal(project)"
-                  class="project-btn inline-flex items-center gap-2 px-5 py-2 font-semibold transition-all duration-300"
+                  class="project-btn inline-flex items-center gap-2 px-3 py-1.5 sm:px-5 sm:py-2 text-sm sm:text-base font-semibold transition-all duration-300 whitespace-nowrap"
                 >
                   <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
                     <polygon points="6 3 20 12 6 21 6 3"></polygon>
@@ -159,11 +159,11 @@ function closeModal() {
                   {{ t('projects_locale.full_preview_btn') }}
                 </a>
 
-                <a 
-                  :href="project.projectLink" 
-                  target="_blank" 
+                <a
+                  :href="project.projectLink"
+                  target="_blank"
                   rel="noopener noreferrer"
-                  class="project-btn inline-flex items-center gap-2 px-5 py-2 font-semibold transition-all duration-300"
+                  class="project-btn inline-flex items-center gap-2 px-3 py-1.5 sm:px-5 sm:py-2 text-sm sm:text-base font-semibold transition-all duration-300 whitespace-nowrap"
                 >
                   {{t('projects_locale.project_btn_label')}}
                   <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -173,8 +173,8 @@ function closeModal() {
                 </a>
               </div>
             </div>
-            
-            <div class="flex flex-wrap gap-3">
+
+            <div class="flex flex-wrap gap-2 sm:gap-3">
               <span
                 v-for="tag in project.tags" :key="tag"
                 class="colored-text skill-tag inline-flex border rounded-full px-3.5 py-1.5 text-sm"
@@ -216,7 +216,6 @@ function closeModal() {
 .card-media {
   position: relative;
   overflow: hidden;
-  height: 300px;
   width: 100%;
   aspect-ratio: 16/9;
 }
@@ -365,5 +364,19 @@ function closeModal() {
   color: #fff;
   font-size: 1.5rem;
   cursor: pointer;
+}
+
+@media (max-width: 640px) {
+  .carousel-btn {
+    display: none;
+  }
+
+  .carousel {
+    padding: 8px 4px;
+  }
+
+  .carousel-item {
+    min-height: 0;
+  }
 }
 </style>
