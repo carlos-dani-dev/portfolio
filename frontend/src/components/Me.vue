@@ -11,7 +11,7 @@
 
 <template>
 
-<section class="min-h-dvh snap-start p-6 lg:p-12 max-w-6xl mx-auto flex flex-col-reverse lg:grid lg:grid-cols-[1fr_auto] gap-8 lg:gap-24 items-center justify-center">
+<section class="min-h-[calc(100dvh-6rem)] snap-start p-6 lg:p-12 max-w-6xl mx-auto flex flex-col-reverse lg:grid lg:grid-cols-[1fr_auto] gap-8 lg:gap-24 items-center justify-center">
   <div>
     <div class="flex gap-2">
         <span class="colored-text skill-tag inline-flex border rounded-full px-3.5 py-1.5 text-sm mb-6">

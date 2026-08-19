@@ -111,6 +111,11 @@ function send_email() {
   color: inherit;
 }
 
+.input-field::placeholder {
+  color: var(--color-text);
+  opacity: 0.6;
+}
+
 .input-field:focus {
   border-color: var(--contact-input-focus-border-color);
   background-color: rgba(0, 0, 0, 0.2);
