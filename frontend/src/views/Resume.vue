@@ -529,6 +529,10 @@ select option {
     color-adjust: exact !important;
   }
 
+  html {
+    font-size: 10px !important;
+  }
+
   @page {
     margin: 0;
     size: A4;
@@ -544,6 +548,14 @@ select option {
     background-color: var(--color-bg) !important;
   }
 
+  html, body {
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    background-color: var(--color-bg) !important;
+    color: var(--color-text) !important;
+  }
+
   .resume {
     border: none !important;
     border-radius: 0 !important;
@@ -551,16 +563,74 @@ select option {
     max-width: 100% !important;
     width: 100% !important;
     margin: 0 !important;
-    padding: 0.6in 0.55in !important;
+    padding: 0.35in 0.45in !important;
     background-color: var(--color-bg) !important;
   }
 
-  html, body {
-    width: 100% !important;
-    margin: 0 !important;
-    padding: 0 !important;
-    background-color: var(--color-bg) !important;
-    color: var(--color-text) !important;
+  .resume__section {
+    padding: 0.5rem 0 !important;
+  }
+
+  .resume__title {
+    font-size: 0.72rem !important;
+    margin-bottom: 0.5rem !important;
+  }
+
+  .resume__header {
+    margin-bottom: 0.9rem !important;
+  }
+
+  .resume__name {
+    font-size: 1.55rem !important;
+    margin-bottom: 0.1rem !important;
+  }
+
+  .resume__role {
+    font-size: 0.92rem !important;
+    margin-bottom: 0.55rem !important;
+  }
+
+  .resume__contact {
+    gap: 0.7rem !important;
+  }
+
+  .resume__contact-item {
+    font-size: 0.72rem !important;
+  }
+
+  .resume__summary {
+    font-size: 0.8rem !important;
+    line-height: 1.5 !important;
+  }
+
+  .resume__entry {
+    margin-bottom: 0.7rem !important;
+  }
+
+  .resume__entry-head {
+    margin-bottom: 0.3rem !important;
+  }
+
+  .resume__entry-role {
+    font-size: 0.85rem !important;
+  }
+
+  .resume__entry-company {
+    font-size: 0.76rem !important;
+    margin-top: 0.1rem !important;
+  }
+
+  .resume__entry-period {
+    font-size: 0.72rem !important;
+  }
+
+  .resume__bullets {
+    font-size: 0.74rem !important;
+    line-height: 1.4 !important;
+  }
+
+  .resume__bullets li {
+    margin-bottom: 0.12rem !important;
   }
 
   .resume__entry {
@@ -573,6 +643,13 @@ select option {
 
   .resume__title {
     break-after: avoid;
+  }
+
+  .resume__entry--link .resume__bullets li {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
   }
 }
 
