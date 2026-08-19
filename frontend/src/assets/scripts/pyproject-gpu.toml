@@ -1,0 +1,30 @@
+[tool.poetry]
+name = "agentic-vectorized-dataset-balancer"
+version = "0.1.0"
+description = "Vetorização de dataset de faces (variante GPU/CUDA)"
+authors = ["Carlos <carlosdpssrocha@gmail.com>"]
+package-mode = false
+
+[tool.poetry.dependencies]
+python = ">=3.10,<3.12"
+opencv-python = "*"
+torch = { source = "pytorch-cu121" }
+torchvision = { source = "pytorch-cu121" }
+tqdm = "*"
+Pillow = "*"
+pandas = "*"
+numpy = "*"
+facenet-pytorch = "*"
+keras-facenet = "*"
+tensorflow = { extras = ["and-cuda"], version = "*" }
+tf-keras = "*"
+scipy = "<1.16"
+
+[[tool.poetry.source]]
+name = "pytorch-cu121"
+url = "https://download.pytorch.org/whl/cu121"
+priority = "explicit"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

@@ -4,6 +4,7 @@
     import GithubIcon from "@/assets/icons/icons8-github.svg";
     import LinkedinIcon from "@/assets/icons/icons8-linkedin.svg";
     import meImage from "@/assets/images/me.png";
+    import gsa2026Image from "@/assets/images/gsa2026.png";
 
     const {t} = useI18n()
 </script>
@@ -36,8 +37,13 @@
     <div class="flex gap-3">
     </div>
   </div>
-  <div class="img-mockup w-56 h-56 lg:w-[430px] lg:h-[430px] rounded-full overflow-hidden mx-auto">
+  <div class="relative w-fit mx-auto">
+    <div class="img-mockup w-56 h-56 lg:w-[430px] lg:h-[430px] rounded-full overflow-hidden">
         <img :src="meImage" alt="Carlos Portela" class="w-full h-full object-cover" />
+    </div>
+    <a href="https://www.linkedin.com/feed/update/urn:li:activity:7494427782740086784/" target="_blank" rel="noopener noreferrer" class="gsa-sticker absolute top-0 right-0 lg:-right-5 flex items-center">
+        <img :src="gsa2026Image" alt="GSA 2026" class="h-24 lg:h-28 w-auto rounded-md" />
+    </a>
   </div>
 </section>
 
@@ -68,6 +74,15 @@
 
 .social-tag:hover {
   background-color: var(--tag-skill-border-color);
+}
+
+.gsa-sticker {
+  transition: transform 0.2s ease;
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));
+}
+
+.gsa-sticker:hover {
+  transform: scale(1.1);
 }
 
 

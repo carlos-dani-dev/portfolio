@@ -49,6 +49,11 @@ html {
   --resume-bullet-marker-color: #776da1;
   --resume-option-bg-color: white;
   --resume-option-text-color: black;
+
+  --code-bg-color: rgba(119, 109, 161, 0.06);
+  --code-border-color: rgba(128, 128, 128, 0.18);
+  --code-header-bg-color: rgba(119, 109, 161, 0.1);
+  --code-text-color: #2b2b2b;
 }
 
 :root[page-theme="dark-default"] {
@@ -96,6 +101,11 @@ html {
   --resume-bullet-marker-color: rgb(253, 140, 60);
   --resume-option-bg-color: rgb(27, 27, 27);
   --resume-option-text-color: white;
+
+  --code-bg-color: rgba(253, 140, 60, 0.05);
+  --code-border-color: rgba(128, 128, 128, 0.18);
+  --code-header-bg-color: rgba(253, 140, 60, 0.09);
+  --code-text-color: rgba(255, 255, 255, 0.85);
 }
 
 body {

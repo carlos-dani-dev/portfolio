@@ -89,6 +89,13 @@ export default {
 
         experience_title: "Experiência Profissional",
 
+        exp_0_role: "Embaixador Estudantil do Google",
+        exp_0_company: "Google",
+        exp_0_period: "2026 — Atual",
+        exp_0_bullet_1: "Selecionado no programa GSA 2026 para representar o Google e promover suas tecnologias na comunidade acadêmica",
+        exp_0_bullet_2: "Produção e divulgação de conteúdo técnico sobre IA Generativa, cloud e desenvolvimento para estudantes",
+        exp_0_bullet_3: "Facilitação de eventos, workshops e mentoria para a comunidade estudantil local",
+
         exp_1_role: "Engenheiro de Dados Jr",
         exp_1_company: "IGDS, consultoria",
         exp_1_period: "Fev 2026 — Atual",

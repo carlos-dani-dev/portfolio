@@ -106,9 +106,9 @@ function closeModal() {
 </script>
 
 <template>
-  <section id="projects-section" class="min-h-dvh snap-start flex flex-col justify-center py-12 max-w-10xl mx-auto px-4 md:px-8">
-    
-    <div class="text-center mb-16">
+  <section id="projects-section" class="min-h-dvh snap-start flex flex-col justify-center py-8 max-w-10xl mx-auto px-4 md:px-8">
+
+    <div class="text-center mb-8">
       <h2 class="colored-text text-4xl md:text-5xl font-bold tracking-tight mb-4">{{ t('projects_locale.title') }}</h2>
       <p class="text-lg opacity-80 max-w-1xl">
         <MarkdownText :content="t('projects_locale.section_description')" />
@@ -123,7 +123,7 @@ function closeModal() {
       <ul ref="carouselRef" class="carousel">
         <li
           v-for="project in projects" :key="project.key"
-          class="project-card carousel-item overflow-hidden border flex flex-col max-w-[1000px] mx-auto w-full rounded-2xl transition-all duration-300 hover:-translate-y-1 cursor-pointer">
+          class="project-card carousel-item overflow-hidden border flex flex-col max-w-[640px] mx-auto w-full rounded-2xl transition-all duration-300 hover:-translate-y-1 cursor-pointer">
           
           <div
             class="card-media"
@@ -143,17 +143,17 @@ function closeModal() {
             ></video>
           </div>
 
-          <div class="flex flex-col gap-4 p-3 sm:p-4">
+          <div class="flex flex-col gap-3 p-3 sm:p-4">
 
-            <div class="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-3">
-              <p class="colored-text text-xl sm:text-2xl md:text-3xl font-semibold break-words"><MarkdownText :content="t(project.titleKey)" /></p>
+            <div class="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-2 min-w-0">
+              <p class="colored-text text-lg sm:text-xl md:text-2xl font-semibold break-words min-w-0"><MarkdownText :content="t(project.titleKey)" /></p>
 
-              <div class="flex flex-row flex-wrap items-center gap-2 sm:gap-3">
+              <div class="flex flex-row items-center gap-2 sm:gap-3 shrink-0">
                 <a href="#"
                   @click.prevent="openModal(project)"
-                  class="project-btn inline-flex items-center gap-2 px-3 py-1.5 sm:px-5 sm:py-2 text-sm sm:text-base font-semibold transition-all duration-300 whitespace-nowrap"
+                  class="project-btn inline-flex items-center gap-2 px-2.5 py-1 sm:px-4 sm:py-1.5 text-xs sm:text-sm font-semibold transition-all duration-300 whitespace-nowrap"
                 >
-                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
                     <polygon points="6 3 20 12 6 21 6 3"></polygon>
                   </svg>
                   {{ t('projects_locale.full_preview_btn') }}
@@ -163,7 +163,7 @@ function closeModal() {
                   :href="project.projectLink"
                   target="_blank"
                   rel="noopener noreferrer"
-                  class="project-btn inline-flex items-center gap-2 px-3 py-1.5 sm:px-5 sm:py-2 text-sm sm:text-base font-semibold transition-all duration-300 whitespace-nowrap"
+                  class="project-btn inline-flex items-center gap-2 px-2.5 py-1 sm:px-4 sm:py-1.5 text-xs sm:text-sm font-semibold transition-all duration-300 whitespace-nowrap"
                 >
                   {{t('projects_locale.project_btn_label')}}
                   <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -174,14 +174,14 @@ function closeModal() {
               </div>
             </div>
 
-            <div class="flex flex-wrap gap-2 sm:gap-3">
+            <div class="flex flex-wrap gap-2">
               <span
                 v-for="tag in project.tags" :key="tag"
-                class="colored-text skill-tag inline-flex border rounded-full px-3.5 py-1.5 text-sm"
+                class="colored-text skill-tag inline-flex border rounded-full px-3 py-1 text-xs sm:text-sm"
                 >{{ tag }}</span>
             </div>
 
-            <p class="">
+            <p class="text-sm sm:text-base line-clamp-2">
               <MarkdownText :content="t(project.descriptionKey)" />
             </p>
           </div>
@@ -213,12 +213,13 @@ function closeModal() {
   border-color: var(--project-card-border-color-hover);
 }
 
-.card-media {
-  position: relative;
-  overflow: hidden;
-  width: 100%;
-  aspect-ratio: 16/9;
-}
+  .card-media {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    background-color: var(--project-card-bg-color);
+  }
 
 .thumb, .preview-video {
   width: 100%;
@@ -330,7 +331,7 @@ function closeModal() {
   justify-content: flex-start;
   border-radius: 8px;
 
-  scroll-snap-align: center;
+  scroll-snap-align: start;
 }
 
 .modal-overlay {
@@ -377,6 +378,12 @@ function closeModal() {
 
   .carousel-item {
     min-height: 0;
+  }
+}
+
+@media (min-width: 900px) {
+  .carousel-item {
+    flex: 0 0 calc(50% - 0.5rem);
   }
 }
 </style>

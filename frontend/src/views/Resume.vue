@@ -67,6 +67,17 @@ const projects = [
 
 const experiences = [
   {
+    key: 'exp_0',
+    roleKey: 'resume.exp_0_role',
+    companyKey: 'resume.exp_0_company',
+    periodKey: 'resume.exp_0_period',
+    bulletKeys: [
+      'resume.exp_0_bullet_1',
+      'resume.exp_0_bullet_2',
+      'resume.exp_0_bullet_3'
+    ]
+  },
+  {
     key: 'exp_1',
     roleKey: 'resume.exp_1_role',
     companyKey: 'resume.exp_1_company',
