@@ -16,6 +16,7 @@ const papers = [
     thumb: thumbMicai2026,
     tags: ['Python', 'Tensorflow', 'Deep Learning'],
     paperLink: "https://micai.org/2026/authors/#guide_accepted",
+    status: 'accepted',
   },
   {
     key: 'sbpo2026',
@@ -24,6 +25,7 @@ const papers = [
     thumb: thumbSbpo2026,
     tags: ['Otimização', 'Pesquisa Operacional', 'Python'],
     paperLink: "https://eventos.galoa.com.br/sbpo-2026/page/7035-inicio",
+    status: 'accepted',
   }
 ]
 </script>
@@ -45,6 +47,9 @@ const papers = [
 
         <div class="card-media">
           <img :src="paper.thumb" class="thumb" alt="Paper poster" />
+          <span class="status-tag" :class="`status-tag--${paper.status}`">
+            {{ t(`papers_locale.status_${paper.status}`) }}
+          </span>
         </div>
 
         <div class="flex flex-col gap-3 p-3 sm:p-4">
@@ -107,6 +112,26 @@ const papers = [
   object-fit: cover;
   position: absolute;
   inset: 0;
+}
+
+.status-tag {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 1;
+  padding: 4px 12px;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  backdrop-filter: blur(4px);
+}
+
+.status-tag--accepted {
+  color: #0f9d58;
+  background-color: #eafaf1;
+  border: 1px solid rgba(15, 157, 88, 0.5);
 }
 
 .colored-text {

@@ -60,6 +60,7 @@ export default {
         title: "Published Papers",
         section_description: "**Scientific** publications where I worked as a **researcher** or **co-author**.",
         view_paper_btn: "View paper",
+        status_accepted: "Accepted",
         items: {
             micai2026: {
                 title: "**MICAI 2026**",
