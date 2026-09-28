@@ -62,13 +62,13 @@ export default {
         view_paper_btn: "Ver artigo",
         items: {
             micai2026: {
-                title: "**MICAI 2026** — Título do artigo",
-                description: "Descrição da minha atuação nesta publicação, incluindo **metodologia** e **resultados** obtidos com o modelo proposto."
-            },
-            sbpo2026: {
-                title: "**SBPO 2026** — Título do artigo",
-                description: "Descrição da minha atuação nesta publicação, incluindo a **modelagem** do problema e a **abordagem de otimização** utilizada."
-            }
+            title: "**MICAI 2026**",
+            description: "**Desbalanceamento** de Atributo Demográfico na Geração e Detecção de **DeepFake**"
+        },
+        sbpo2026: {
+            title: "**SBPO 2026**",
+            description: "QUASAR (Sistema Quântico Unificado de Arbitragem para Reconhecimento Adaptativo): Uma **Arquitetura Quântica-Híbrida** para Classificação Supervisionada Binária em **Transações de Pagamento**"
+        }
         }
     },
     contact: {
