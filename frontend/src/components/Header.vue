@@ -34,10 +34,10 @@
         <!-- Desktop nav links -->
         <div class="hidden md:flex items-center">
             <ul class="flex flex-wrap gap-5">
-                <li><a href="#aboutMe-section" class="nav-a">{{ t('nav.about') }}</a></li>
                 <li><a href="#stacks-section" class="nav-a">{{ t('nav.stack') }}</a></li>
                 <li><a href="#projects-section" class="nav-a">{{ t('nav.projects') }}</a></li>
                 <li><a href="#experiences-section" class="nav-a">{{ t('nav.experiences') }}</a></li>
+                <li><a href="#papers-section" class="nav-a">{{ t('nav.papers') }}</a></li>
                 <li><a href="#contact-section" class="nav-a">{{t('nav.contact')}}</a></li>
                 <li><router-link to="/home/resume" class="nav-a underline">{{t('nav.resume')}}</router-link></li>
             </ul>
@@ -104,10 +104,10 @@
     <!-- Mobile dropdown menu -->
     <div class="mobile-menu md:hidden" :class="{ 'mobile-menu--open': isMenuOpen }">
         <ul class="flex flex-col gap-1 px-4 py-3">
-            <li><a href="#aboutMe-section" class="nav-a mobile-nav-a" @click="closeMenu">{{ t('nav.about') }}</a></li>
             <li><a href="#stacks-section" class="nav-a mobile-nav-a" @click="closeMenu">{{ t('nav.stack') }}</a></li>
             <li><a href="#projects-section" class="nav-a mobile-nav-a" @click="closeMenu">{{ t('nav.projects') }}</a></li>
             <li><a href="#experiences-section" class="nav-a mobile-nav-a" @click="closeMenu">{{ t('nav.experiences') }}</a></li>
+            <li><a href="#papers-section" class="nav-a mobile-nav-a" @click="closeMenu">{{ t('nav.papers') }}</a></li>
             <li><a href="#contact-section" class="nav-a mobile-nav-a" @click="closeMenu">{{t('nav.contact')}}</a></li>
             <li><router-link to="/home/resume" class="nav-a mobile-nav-a underline" @click="closeMenu">{{t('nav.resume')}}</router-link></li>
         </ul>

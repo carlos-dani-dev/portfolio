@@ -21,7 +21,7 @@
         {{t('me.ml_researcher_skill_tag')}}
         </span>
     </div>
-    <p class="text-xl mb-2"><MarkdownText :content="t('me.hello')" /></p>
+    <p class="text-xl opacity-80 mb-2"><MarkdownText :content="t('me.hello')" /></p>
     <h1 class="colored-text text-5xl lg:text-7xl font-bold mb-6 tracking-tight">Carlos Portela</h1>
     <p class="leading-relaxed text-xl opacity-80  mb-8">
         <MarkdownText :content="t('me.intro')" />

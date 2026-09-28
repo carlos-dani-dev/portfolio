@@ -1,27 +1,18 @@
 export default {
     nav: {
         home: "Home",
-        about: "About Me",
         stack: "Stack",
         projects: "Projects",
         experiences: "Experience",
+        papers: "Papers",
         contact: "Contact",
         resume: "Resume"
     },
     me: {
         ml_researcher_skill_tag: "Machine Learning Researcher",
-        fs_skill_tag: "Fullstack Developer",
-        hello: "Hi, I'm",
-        intro: "**Fullstack Developer** and **Machine Learning** researcher. Focused on **solutions** that combine **optimization** with **Generative AI** models, integrating product, data, and automation."
-    },
-    aboutMe: {
-        title: "About Me",
-        section_description: "A brief introduction to the **experiences** that shaped me and the **values** that describe me.",
-        paragraph1: "I'm Carlos Daniel Portela, 22 years old, currently finishing my degree in **Computer Science** at the **Federal University of Piauí**. Here, I'm sharpening my skills in **software development** and **applied research** through real, impactful projects. I'm comfortable across every layer of an application and able to build solutions integrated with **Generative AI** models, as well as deploy them to the cloud, mainly with **AWS**.",
-        paragraph2: "At **UFPI**, I developed projects related to **Generative AI** and I'm currently part of the **Computer Vision lab, LabVip**. Outside academia, I maintained a full **data pipeline** for **IGDS**, the Institute for Management and Sustainable Development.",
-        backend: "**APIs** & Backend",
-        ai: "**Generative AI** integrations",
-        research: "Applied **ML** research"
+        fs_skill_tag: "Data Engineer",
+        hello: "**Hi, I'm**",
+        intro: "**Data Engineer** and **Machine Learning** researcher. Focused on **solutions** that combine **optimization** with **Gen AI**."
     },
     stacks: {
         title: "Domain Ecosystem",
@@ -61,9 +52,24 @@ export default {
         xp_1_title: "CNPq Machine Learning Researcher",
         xp_1_date: "August 2024 - Present",
         xp_1_description: "I'm responsible for the first-ever implementation of the **Massive Attribute Classifier**, conceived by German researcher Terhörst, in **MAAD-Face**: A Massively Annotated Attribute Dataset for Face Images. The classifier is a core part of a PhD project at the lab I'm part of, **LabVip**.",
-        xp_2_title: "Jr Data Analyst",
+        xp_2_title: "Jr Data Engineer",
         xp_2_date: "February 2026 - June 2026",
         xp_2_description: "I worked as a data consultant for **IGDS** for 5 months. I was responsible for building and maintaining a complete **data pipeline** focused on monitoring the rollout of the largest food-insecurity public policy in Brazil's Northeast, the **Tá Na Mesa Program**. Working closely with my manager, who liaised with the State Secretariat of Human Development, we designed a full **KPI tree** that underpinned our **monitoring framework**. The work culminated in a complete **BI Dashboard**, built in **Metabase**, that fed the final reports presented to the secretariat."
+    },
+    papers_locale: {
+        title: "Published Papers",
+        section_description: "**Scientific** publications where I worked as a **researcher** or **co-author**.",
+        view_paper_btn: "View paper",
+        items: {
+            micai2026: {
+                title: "**MICAI 2026**",
+                description: "Demographic Attribute **Unbalancing** on **DeepFake** Generation and Detection"
+            },
+            sbpo2026: {
+                title: "**SBPO 2026**",
+                description: "QUASAR (Quantum Unified Arbitration System for Adaptive Recognition): A **Quantum-Hybrid Architecture** for Binary Supervised Classification in **Payment Transactions**"
+            }
+        }
     },
     contact: {
         title: "Get in Touch",
@@ -89,7 +95,7 @@ export default {
         exp_1_bullet_1: "Collecting beneficiary information through a **digital form**",
         exp_1_bullet_2: "Processing raw data and composing **key performance indicators (KPIs)**",
         exp_1_bullet_3: "Serving transformed data with **Python** through a **FastAPI** API for insights consumption and provisioning in **Metabase**",
-        exp_2_role: "Researcher — DeepFake Detection",
+        exp_2_role: "Researcher, DeepFake Detection",
         exp_2_company: "LabVip, UFPI",
         exp_2_period: "Sep 2024 — Present",
         exp_2_bullet_1: "Reviewing and analyzing scientific papers in English",
@@ -121,13 +127,6 @@ export default {
         summary_text: "I'm finishing my degree in **Computer Science** at UFPI. I'm also a **Researcher** in **DeepFakes** using **Dense Neural Networks (DNNs)**. I've also worked as a **Jr Data Engineer** at **IGDS**, during the rollout of the **Tá Na Mesa Program**, in the state of Paraíba. I have skills in cloud machine management with **AWS EC2** and **S3**, **Linux** proficiency, plus **SQL** with **PostgreSQL**, **JavaScript**, and Python frameworks: **React**, **Vue.js**, and advanced **FastAPI**, **SQLAlchemy**, **Langchain**, **Tensorflow**, **Pandas**, **Selenium**, **Jinja**.",
 
         experience_title: "Professional Experience",
-
-        exp_0_role: "Google Student Ambassador",
-        exp_0_company: "Google",
-        exp_0_period: "2026 — Present",
-        exp_0_bullet_1: "Selected for the GSA 2026 program to represent Google and promote its technologies within the academic community",
-        exp_0_bullet_2: "Creating and sharing technical content on Generative AI, cloud, and development for students",
-        exp_0_bullet_3: "Facilitating events, workshops, and mentorship for the local student community",
 
         exp_1_role: "Jr Data Engineer",
         exp_1_company: "IGDS, consulting",

@@ -1,27 +1,18 @@
 export default {
     nav: {
         home: "Início",
-        about: "Sobre mim",
         stack: "Stacks",
         projects: "Projetos",
         experiences: "Experiências",
+        papers: "Artigos",
         contact: "Contato",
         resume: "Currículo"
     },
     me: {
         ml_researcher_skill_tag: "Pesquisador de Machine Learning",
-        fs_skill_tag: "Desenvolvedor Fullstack",
-        hello: "Olá, eu sou",
-        intro: "**Desenvolvedor Fullstack** e pesquisador de **Machine Learning**.Foco em **soluções** que combinam **otimização** com modelos de **IA Generativa**, integrando produto, dados e automação."
-    },
-    aboutMe: {
-        title: "Sobre mim",
-        section_description: "Uma breve introdução às **experiências** que me moldaram e aos **valores** que me descrevem.",
-        paragraph1: "Sou Carlos Daniel Portela, tenho 22 anos, e estou concluindo minha graduação em **Ciências da Computação** na **Universidade Federal do Piauí**. Por aqui, estou aprimorando minhas habilidades em **desenvolvimento de software** e **pesquisa aplicada** com projetos reais e de impacto. Me sinto à vontade em todas as camadas de uma aplicação e consigo desenvolver soluções integradas a modelos de **IA Generativa**, além de disponibilizá-las na nuvem, principalmente com **AWS**.",
-        paragraph2: "Na **UFPI**, desenvolvi projetos relacionados à **IA Generativa** e atualmente faço parte do laboratório de **Visão Computacional, LabVip**. Fora dos domínios acadêmicos, mantive um **pipeline de dados** completo para o **IGDS**, Instituto de Gestão e Desenvolvimento Sustentável.",
-        backend: "**APIs** & Backend",
-        ai: "Integrações com **IA Generativa**",
-        research: "Pesquisa em **ML** aplicada"
+        fs_skill_tag: "Engenheiro de Dados",
+        hello: "**Olá, eu sou**",
+        intro: "**Engenheiro de Dados** e pesquisador de **Machine Learning**. Foco em **soluções** que combinam **otimização** com modelos de **IA Generativa**."
     },
     stacks: {
         title: "Ecossistema de Domínio",
@@ -61,9 +52,24 @@ export default {
         xp_1_title: "Pesquisador CNPQ de Machine Learning",
         xp_1_date: "Agosto 2024 - Atual",
         xp_1_description: "Sou responsável pela implementação inédita do **Massive Attribute Classifier**, idealizado pelo pesquisador alemão Terhörst, em **MAAD-Face**: A Massively Annotated Attribute Dataset for Face Images. O classificador é parte fundamental de um dos trabalhos de doutorado deste laboratório do qual faço parte, o **LabVip**.",
-        xp_2_title: "Analista de Dados Jr",
+        xp_2_title: "Engenheiro de Dados Jr",
         xp_2_date: "Fevereiro 2026 - Junho 2026",
         xp_2_description: "Atuei como consultor de dados do **IGDS** por 5 meses. Fui responsável por criar e manter um **pipeline de dados** completo focado no monitoramento da operacionalização da maior política pública de insegurança alimentar do Nordeste, o **Programa Tá Na Mesa**. Em conformidade com meu gerente, que intermediava nosso contato com a Secretaria do Estado de Desenvolvimento Humano, desenhamos uma **árvore de KPIs** completa, que embasou o nosso **instrumental de monitoramento**. O trabalho culminou em um **Dashboard de BI** completo, em **Metabase**, que alimentou os relatórios finais apresentados à secretaria."
+    },
+    papers_locale: {
+        title: "Artigos publicados",
+        section_description: "Publicações **científicas** em que atuei como **pesquisador** ou **coautor**.",
+        view_paper_btn: "Ver artigo",
+        items: {
+            micai2026: {
+                title: "**MICAI 2026** — Título do artigo",
+                description: "Descrição da minha atuação nesta publicação, incluindo **metodologia** e **resultados** obtidos com o modelo proposto."
+            },
+            sbpo2026: {
+                title: "**SBPO 2026** — Título do artigo",
+                description: "Descrição da minha atuação nesta publicação, incluindo a **modelagem** do problema e a **abordagem de otimização** utilizada."
+            }
+        }
     },
     contact: {
         title: "Entre em contato",
@@ -89,13 +95,6 @@ export default {
 
         experience_title: "Experiência Profissional",
 
-        exp_0_role: "Embaixador Estudantil do Google",
-        exp_0_company: "Google",
-        exp_0_period: "2026 — Atual",
-        exp_0_bullet_1: "Selecionado no programa GSA 2026 para representar o Google e promover suas tecnologias na comunidade acadêmica",
-        exp_0_bullet_2: "Produção e divulgação de conteúdo técnico sobre IA Generativa, cloud e desenvolvimento para estudantes",
-        exp_0_bullet_3: "Facilitação de eventos, workshops e mentoria para a comunidade estudantil local",
-
         exp_1_role: "Engenheiro de Dados Jr",
         exp_1_company: "IGDS, consultoria",
         exp_1_period: "Fev 2026 — Atual",
@@ -103,7 +102,7 @@ export default {
         exp_1_bullet_2: "Tratamento de dados brutos e composição de indicadores-chave (KPI's) a partir de views SQL",
         exp_1_bullet_3: "Disposição de dados persistidos em PostgreSQL, e transformados com Python e SQL, por meio de API FastAPI para consumo e provisionamento de insights com Metabase",
 
-        exp_2_role: "Pesquisador — Detecção de DeepFake",
+        exp_2_role: "Pesquisador, Detecção de DeepFake",
         exp_2_company: "LabVip, UFPI",
         exp_2_period: "Set 2024 — Atual",
         exp_2_bullet_1: "Análise e review de artigos científicos em inglês",
