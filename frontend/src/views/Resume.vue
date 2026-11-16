@@ -24,6 +24,14 @@ function download_resume() {
 
 const projects = [
   {
+    key: 'arnaldo_gym',
+    titleKey: 'projects_locale.items.arnaldo_gym.title',
+    descriptionKey: 'projects_locale.items.arnaldo_gym.description',
+    tags: ['Gemini', 'FastAPI', 'PostgreSQL'],
+    projectLink: "https://arnaldogymai.com",
+    videoElement: null
+  },
+  {
     key: 'cashback_multiagent',
     titleKey: 'projects_locale.items.cashback_multiagent.title',
     descriptionKey: 'projects_locale.items.cashback_multiagent.description',
@@ -65,7 +73,22 @@ const projects = [
   }
 ]
 
+// o currículo mostra só os mais recentes; a lista completa fica no portfólio
+const RESUME_PROJECT_COUNT = 3
+const recentProjects = projects.slice(0, RESUME_PROJECT_COUNT)
+
 const experiences = [
+  {
+    key: 'exp_4',
+    roleKey: 'resume.exp_4_role',
+    companyKey: 'resume.exp_4_company',
+    periodKey: 'resume.exp_4_period',
+    bulletKeys: [
+      'resume.exp_4_bullet_1',
+      'resume.exp_4_bullet_2',
+      'resume.exp_4_bullet_3'
+    ]
+  },
   {
     key: 'exp_1',
     roleKey: 'resume.exp_1_role',
@@ -203,7 +226,7 @@ const experiences = [
       <h2 class="resume__title">{{ t('projects_locale.title') }}</h2>
 
       <a
-        v-for="project in projects" :key="project.key"
+        v-for="project in recentProjects" :key="project.key"
         class="resume__entry resume__entry--link"
         :href="project.projectLink"
         target="_blank"
@@ -215,6 +238,11 @@ const experiences = [
           <li><MarkdownText :content="t(project.descriptionKey)" /></li>
         </ul>
       </a>
+
+      <p class="resume__entry-company">
+        {{ t('resume.more_projects') }}
+        <a href="https://carlos-dani-dev.github.io/portfolio/home" target="_blank" rel="noopener">carlos-dani-dev.github.io/portfolio</a>
+      </p>
     </section>
 
     <section class="resume__section">

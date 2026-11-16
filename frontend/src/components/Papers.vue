@@ -15,7 +15,7 @@ const papers = [
     descriptionKey: 'papers_locale.items.micai2026.description',
     thumb: thumbMicai2026,
     tags: ['Python', 'Tensorflow', 'Deep Learning'],
-    paperLink: "https://micai.org/2026/authors/#guide_accepted",
+    paperLink: "https://link.springer.com/chapter/10.1007/978-3-032-44176-8_23",
     status: 'accepted',
   },
   {
@@ -24,7 +24,7 @@ const papers = [
     descriptionKey: 'papers_locale.items.sbpo2026.description',
     thumb: thumbSbpo2026,
     tags: ['Otimização', 'Pesquisa Operacional', 'Python'],
-    paperLink: "https://eventos.galoa.com.br/sbpo-2026/page/7035-inicio",
+    paperLink: "https://proceedings.science/sbpo-2026/trabalhos/quasar-quantum-unified-arbitration-system-for-adaptive-recognition-a-quantum-hyb?lang=pt-br#",
     status: 'accepted',
   }
 ]

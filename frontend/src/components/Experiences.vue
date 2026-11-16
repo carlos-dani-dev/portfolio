@@ -6,6 +6,14 @@ const { t } = useI18n()
 
 const experiences = [
   {
+    key: 'xp_3',
+    titleKey: 'experiences.xp_3_title',
+    descriptionKey: 'experiences.xp_3_description',
+    dateKey: 'experiences.xp_3_date',
+    company: 'SERG, UFPI',
+    tags: ['Python', 'LLMs', 'Fine-tuning']
+  },
+  {
     key: 'xp_1',
     titleKey: 'experiences.xp_1_title',
     descriptionKey: 'experiences.xp_1_description',

@@ -24,6 +24,10 @@ export default {
         full_preview_btn: "Preview completo",
         project_btn_label: "Ver projeto",
         items: {
+            arnaldo_gym: {
+                title: "**Arnaldo Gym AI**",
+                description: "Um **agente de IA no WhatsApp** que funciona como parceiro de treino: registra as séries por mensagem e acompanha a **progressão de carga** treino a treino, sem planilha e sem app novo. Backend em **FastAPI** com **Gemini** e **PostgreSQL**.",
+            },
             cashback_multiagent: {
                 title: "Análise de Cashback **Multiagente**",
                 description: "Um sistema **multiagente** que automatiza a **análise de dados** de testes A/B de programas de cashback, orquestrando agentes de **IA** com **Claude** para gerar insights a partir de dados processados com **Python** e **Pandas**.",
@@ -50,8 +54,11 @@ export default {
         title: "Experiência profissional",
         section_description: "Estas são as experiências que melhor representam meu trabalho como **desenvolvedor** e **pesquisador**.",
         xp_1_title: "Pesquisador CNPQ de Machine Learning",
-        xp_1_date: "Agosto 2024 - Atual",
-        xp_1_description: "Sou responsável pela implementação inédita do **Massive Attribute Classifier**, idealizado pelo pesquisador alemão Terhörst, em **MAAD-Face**: A Massively Annotated Attribute Dataset for Face Images. O classificador é parte fundamental de um dos trabalhos de doutorado deste laboratório do qual faço parte, o **LabVip**.",
+        xp_1_date: "Agosto 2024 - Setembro 2026",
+        xp_1_description: "Fui responsável pela implementação inédita do **Massive Attribute Classifier**, idealizado pelo pesquisador alemão Terhörst, em **MAAD-Face**: A Massively Annotated Attribute Dataset for Face Images. O classificador é parte fundamental de um dos trabalhos de doutorado deste laboratório do qual fiz parte, o **LabVip**.",
+        xp_3_title: "Pesquisador em LLMs",
+        xp_3_date: "Setembro 2026 - Atual",
+        xp_3_description: "Pesquiso **injeção de conhecimento** em **LLMs** para **domínios sub-representados**. Estudo **casos de sucesso** de LLMs e testo como os modelos **aprendem** conhecimento de domínios pouco presentes em seus dados de treino.",
         xp_2_title: "Engenheiro de Dados Jr",
         xp_2_date: "Fevereiro 2026 - Junho 2026",
         xp_2_description: "Atuei como consultor de dados do **IGDS** por 5 meses. Fui responsável por criar e manter um **pipeline de dados** completo focado no monitoramento da operacionalização da maior política pública de insegurança alimentar do Nordeste, o **Programa Tá Na Mesa**. Em conformidade com meu gerente, que intermediava nosso contato com a Secretaria do Estado de Desenvolvimento Humano, desenhamos uma **árvore de KPIs** completa, que embasou o nosso **instrumental de monitoramento**. O trabalho culminou em um **Dashboard de BI** completo, em **Metabase**, que alimentou os relatórios finais apresentados à secretaria."
@@ -71,7 +78,7 @@ export default {
             description: "QUASAR (Sistema Quântico Unificado de Arbitragem para Reconhecimento Adaptativo): Uma **Arquitetura Quântica-Híbrida** para Classificação Supervisionada Binária em **Transações de Pagamento**"
         }
         }
-    },
+    },  
     contact: {
         title: "Entre em contato",
         section_description: "Sinta-se à vontade para entrar em contato comigo para **oportunidades**, **projetos** ou **dúvidas**. Responderei o mais breve possível.",
@@ -85,6 +92,7 @@ export default {
     },
     resume: {
         download_btn: "Baixar Currículo",
+        more_projects: "Mais projetos no meu portfólio:",
         name: "Carlos Daniel Portela",
         role: "Desenvolvedor de Software & Pesquisador em IA",
 
@@ -92,28 +100,35 @@ export default {
         contact_github: "carlos-dani-dev",
 
         summary_title: "Resumo",
-        summary_text: "Estou me formando em **Ciências da Computação** na UFPI. Sou também **Pesquisador** na área de **DeepFakes** usando **Redes Neurais Densas (DNNs)**. Além disso, atuei como **Engenheiro de Dados Jr** no **IGDS**, durante a operacionalização do programa **Tá Na Mesa**, no estado da Paraíba. Possuo habilidades em gerenciamento de máquinas na nuvem com **AWS EC2** e **S3**, proficiência **Linux**, além de **SQL** com **PostgreSQL**, **JavaScript** e frameworks Python: **React**, **Vue.js** e **FastAPI** avançado, **SQLAlchemy**, **Langchain**, **Tensorflow**, **Pandas**, **Selenium**, **Jinja**.",
+        summary_text: "Estou me formando em **Ciências da Computação** na UFPI e sou **Pesquisador** no **SERG**, onde estudo **injeção de conhecimento** em **LLMs** para **domínios sub-representados**. Antes, pesquisei **DeepFakes** com **Redes Neurais Densas (DNNs)** no **LabVip**. Além disso, atuei como **Engenheiro de Dados Jr** no **IGDS**, durante a operacionalização do programa **Tá Na Mesa**, no estado da Paraíba. Possuo habilidades em gerenciamento de máquinas na nuvem com **AWS EC2** e **S3**, proficiência **Linux**, além de **SQL** com **PostgreSQL**, **JavaScript** e frameworks Python: **React**, **Vue.js** e **FastAPI** avançado, **SQLAlchemy**, **Langchain**, **Tensorflow**, **Pandas**, **Selenium**, **Jinja**.",
 
         experience_title: "Experiência Profissional",
 
         exp_1_role: "Engenheiro de Dados Jr",
         exp_1_company: "IGDS, consultoria",
-        exp_1_period: "Fev 2026 — Atual",
+        exp_1_period: "Fev 2026 a Jun 2026",
         exp_1_bullet_1: "Captura de informações dos beneficiários do programa por formulário digital",
         exp_1_bullet_2: "Tratamento de dados brutos e composição de indicadores-chave (KPI's) a partir de views SQL",
         exp_1_bullet_3: "Disposição de dados persistidos em PostgreSQL, e transformados com Python e SQL, por meio de API FastAPI para consumo e provisionamento de insights com Metabase",
 
         exp_2_role: "Pesquisador, Detecção de DeepFake",
         exp_2_company: "LabVip, UFPI",
-        exp_2_period: "Set 2024 — Atual",
+        exp_2_period: "Set 2024 a Set 2026",
         exp_2_bullet_1: "Análise e review de artigos científicos em inglês",
         exp_2_bullet_2: "Transformação e preparação das bases de imagens do modelo com Python",
         exp_2_bullet_3: "Implementação de Rede Neural Densa (DNN) do zero, com Tensorflow, conforme descrito no paper MAAD-Face: A Massively Annotated Attribute Dataset for Face Images",
         exp_2_bullet_4: "Otimização do desempenho dos scripts de treinamento em GPU e manutenção das máquinas Linux do laboratório",
 
+        exp_4_role: "Pesquisador, LLMs em Domínios Sub-representados",
+        exp_4_company: "SERG, UFPI",
+        exp_4_period: "Desde Set 2026",
+        exp_4_bullet_1: "Pesquisa em injeção de conhecimento em LLMs para domínios sub-representados",
+        exp_4_bullet_2: "Estudo de casos de sucesso de LLMs",
+        exp_4_bullet_3: "Testes de aprendizado de LLMs com dados de domínios sub-representados",
+
         exp_3_role: "Estagiário Administrativo",
         exp_3_company: "Diretoria de Desenvolvimento de Pessoas (SEAD)",
-        exp_3_period: "Abr 2024 — Abr 2026",
+        exp_3_period: "Abr 2024 a Abr 2026",
         exp_3_bullet_1: "Tratamento de processos administrativos no SEI",
         exp_3_bullet_2: "Análise de dados de servidores disponíveis na plataforma SEI, com provisão de insights via PowerBI",
         exp_3_bullet_3: "Extração automática de decretos e nomeações do DOEPI (Diário Oficial do Estado do Piauí), usando Selenium e a API do Google Gemini",
@@ -121,11 +136,11 @@ export default {
 
         education_title: "Educação",
         education_degree: "Bacharelado em Ciência da Computação",
-        education_school: "Universidade Federal do Piauí — UFPI",
-        education_period: "Jun 2022 — Atual",
+        education_school: "Universidade Federal do Piauí (UFPI)",
+        education_period: "Desde Jun 2022",
 
         languages_title: "Idiomas",
-        language_1: "Inglês avançado — escuta, leitura e escrita técnica",
-        language_2: "Português — nativo"
+        language_1: "Inglês avançado: escuta, leitura e escrita técnica",
+        language_2: "Português: nativo"
     }
 }
