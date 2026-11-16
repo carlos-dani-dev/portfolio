@@ -14,6 +14,14 @@ const { t } = useI18n()
 
 const projects = [
   {
+    key: 'arnaldo_gym',
+    titleKey: 'projects_locale.items.arnaldo_gym.title',
+    descriptionKey: 'projects_locale.items.arnaldo_gym.description',
+    video: null,
+    tags: ['Gemini', 'FastAPI', 'PostgreSQL'],
+    projectLink: "https://arnaldogymai.com",
+  },
+  {
     key: 'cashback_multiagent',
     titleKey: 'projects_locale.items.cashback_multiagent.title',
     descriptionKey: 'projects_locale.items.cashback_multiagent.description',
@@ -86,6 +94,7 @@ function closeModal() {
 
             <div class="flex flex-row items-center gap-2 sm:gap-3 shrink-0">
               <a href="#"
+                v-if="project.video"
                 @click.prevent="openModal(project)"
                 class="project-btn inline-flex items-center gap-2 px-2.5 py-1 sm:px-4 sm:py-1.5 text-xs sm:text-sm font-semibold transition-all duration-300 whitespace-nowrap"
               >
